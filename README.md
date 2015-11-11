@@ -1,1 +1,0 @@
-# mobius-android-cordova
