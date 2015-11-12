@@ -8,7 +8,9 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
 	<title>Mobius</title>
 	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />
-    <link rel="stylesheet" href="css/customStyles.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/datepicker.css">    
+    <link rel="stylesheet" href="css/customStyles.css" />    
 	
 </head>
 <body>
@@ -50,7 +52,7 @@
     </div>
 
     <!-- #endregion Jssor Slider End -->
-    <div class="continue-btn"><a href="#news" class="ui-btn">Continue</a></div>
+    <div class="continue-btn"><a href="#news" class="ui-btn" data-transition="slide">Continue</a></div>
     
 
     
@@ -58,16 +60,17 @@
 
     <div data-role="page" id="news">
     	  <div data-role="panel" id="newsPanel" data-position="left">
-          	<div class="signIn"><img src="img/user.png" /><a href="#" class="signInLink" data-transition="slide">Please Sign In</a></div>
+          	<div class="signIn"><img src="img/user.png" /><a href="#signIn" class="signInLink" data-transition="slide">Please Sign In</a></div>
           	<div class="gen">General</div>
     		<ul data-role="listview" id="list">
-                <li><a href="#" data-transition="slide" class="ui-btn"><img src="img/calendar-icon.png" />Book</a></li>
+                <li><a href="#booking" data-transition="slide" class="ui-btn"><img src="img/calendar-icon.png" />Book</a></li>
                 <li><a href="#" data-transition="slide" class="ui-btn"><img src="img/Bullet.png" />My Stays</a></li>
                 <li><a href="#offers" data-transition="slide" class="ui-btn"><img src="img/offers.png" />Offers</a></li>
                 <li><a href="#news" data-transition="slide" class="ui-btn"><img src="img/news.png" />News</a></li>
-                <li><a href="#" data-transition="slide" class="ui-btn"><img src="img/about.png" />About</a></li>
+                <li><a href="#about" data-transition="slide" class="ui-btn"><img src="img/about.png" />About</a></li>
+                <li><a href="#" data-transition="slide" class="ui-btn"><img src="img/share.png" />Share</a></li>
     		</ul>
-    
+    		<div class="signIn"><p>4.0.34 - Test Build</p></div>
 		   </div><!--/ panel -->
         <div data-role="header">
         	<div class="ui-grid-solo bgTheme">
@@ -98,15 +101,17 @@
 
     <div data-role="page" id="offers">
     	  <div data-role="panel" id="offerPanel" data-position="left">
-          	<div class="signIn"><img src="img/user.png" /><a href="#" class="signInLink" data-transition="slide">Please Sign In</a></div>
+          	<div class="signIn"><img src="img/user.png" /><a href="#signIn" class="signInLink" data-transition="slide">Please Sign In</a></div>
           	<div class="gen">General</div>
     		<ul data-role="listview" id="list">
-                <li><a href="#" data-transition="slide" class="ui-btn"><img src="img/calendar-icon.png" />Book</a></li>
+                <li><a href="#booking" data-transition="slide" class="ui-btn"><img src="img/calendar-icon.png" />Book</a></li>
                 <li><a href="#" data-transition="slide" class="ui-btn"><img src="img/Bullet.png" />My Stays</a></li>
                 <li><a href="#offers" data-transition="slide" class="ui-btn"><img src="img/offers.png" />Offers</a></li>
                 <li><a href="#news" data-transition="slide" class="ui-btn"><img src="img/news.png" />News</a></li>
-                <li><a href="#" data-transition="slide" class="ui-btn"><img src="img/about.png" />About</a></li>
+                <li><a href="#about" data-transition="slide" class="ui-btn"><img src="img/about.png" />About</a></li>
+                <li><a href="#" data-transition="slide" class="ui-btn"><img src="img/share.png" />Share</a></li>
     		</ul>
+    		<div class="signIn"><p>4.0.34 - Test Build</p></div>
     
 		   </div><!--/ panel -->
         <div data-role="header">
@@ -135,9 +140,298 @@
         	<h1>Insert Footer Text Here</h1>
         </div>--><!--/ footer -->
     </div><!--/data-role=page-->
+    
+    <div data-role="page" id="about">
+    	  <div data-role="panel" id="aboutPanel" data-position="left">
+          	<div class="signIn"><img src="img/user.png" /><a href="#signIn" class="signInLink" data-transition="slide">Please Sign In</a></div>
+          	<div class="gen">General</div>
+    		<ul data-role="listview" id="list">
+                <li><a href="#booking" data-transition="slide" class="ui-btn"><img src="img/calendar-icon.png" />Book</a></li>
+                <li><a href="#" data-transition="slide" class="ui-btn"><img src="img/Bullet.png" />My Stays</a></li>
+                <li><a href="#offers" data-transition="slide" class="ui-btn"><img src="img/offers.png" />Offers</a></li>
+                <li><a href="#news" data-transition="slide" class="ui-btn"><img src="img/news.png" />News</a></li>
+                <li><a href="#about" data-transition="slide" class="ui-btn"><img src="img/about.png" />About</a></li>
+                <li><a href="#" data-transition="slide" class="ui-btn"><img src="img/share.png" />Share</a></li>
+    		</ul>
+    		<div class="signIn"><p>4.0.34 - Test Build</p></div>
+    
+		   </div><!--/ panel -->
+        <div data-role="header">
+        	<div class="ui-grid-solo bgTheme">
+            	<div class="menu"><a href="#aboutPanel"><img src="img/menu.png" alt="menu" /></a></div>
+                <div class="ribbon"><img src="img/ribbon.png" /></div>
+                <div class="pageName">About</div>
+                <p class="clear"></p>
+            </div>
+        </div><!--/ header -->
+        <div data-role="main" class="ui-content">
+        	<div class="ui-grid-solo contentBorder">
+            	<img src="img/antalya.jpg" class="imgResponsive" />
+                <div class="imgText">Fantastic Antalya</div>
+            </div><!--/ ui-grid-solo -->
+        	<div class="ui-grid-solo contentBorder">
+            	<img src="img/cappadocia.jpg" class="imgResponsive" />
+                <div class="imgText">Fantastic Cappadocia</div>
+            </div><!--/ ui-grid-solo -->
+        	<div class="ui-grid-solo contentBorder">
+            	<img src="img/kusadasi.jpg" class="imgResponsive" />
+                <div class="imgText">Fantastic Kusadasi</div>
+            </div><!--/ ui-grid-solo -->
+        </div><!--/ content -->
+        <!--<div data-role="footer">
+        	<h1>Insert Footer Text Here</h1>
+        </div>--><!--/ footer -->
+    </div><!--/data-role=page-->
+    
+    <div data-role="page" id="roomList" class="pb47">
+        <div data-role="header">
+        	<div class="ui-grid-solo bgTheme">
+            	<div class="menu"><a href="#news"><img src="img/Arrow-Left-icon.png" alt="Left Arrow" /></a></div>
+                <div class="ribbon"><img src="img/ribbon.png" /></div>
+                <div class="pageName">Room List</div>
+                <p class="clear"></p>
+            </div>
+        </div><!--/ header -->
+        <div data-role="main" class="ui-content">
+        	<div class="ui-grid-solo roomTop">
+            	<div class="room">
+                	<img src="img/bed.png">
+                    <div class="roomInner">Room<br />1 of 1</div>
+                </div> 
+                <div class="persons">
+                  	<img src="img/people.png">
+                   	<div class="personsInner">2 Adults<br />0 Children</div>
+                </div>
+            </div>
+        	<div class="ui-grid-solo contentBorder">
+            	<img src="img/antalya.jpg" class="imgResponsive" />
+                <div class="imgTextRoom">
+                	<div class="textRoomLeft">Suita Tumpiv<br /><span>from</span>459.00</div>
+                    <div class="textRoomRight"><img src="img/info.png" /></div>
+                </div>
+            </div><!--/ ui-grid-solo -->
+        	<div class="ui-grid-solo contentBorder">
+            	<img src="img/cappadocia.jpg" class="imgResponsive" />
+                <div class="imgTextRoom">
+                	<div class="textRoomLeft">Suita Tumpiv<br /><span>from</span>459.00</div>
+                    <div class="textRoomRight"><img src="img/info.png" /></div>
+                </div>
+            </div><!--/ ui-grid-solo -->
+        	<div class="ui-grid-solo contentBorder">
+            	<img src="img/kusadasi.jpg" class="imgResponsive" />
+                <div class="imgTextRoom">
+                	<div class="textRoomLeft">Suita Tumpiv<br /><span>from</span>459.00</div>
+                    <div class="textRoomRight"><img src="img/info.png" /></div>
+                </div>
+            </div><!--/ ui-grid-solo -->
+            <div class="roomBottom">Please Select A Room</div>
+        </div><!--/ content -->
+        <!--<div data-role="footer">
+        	<h1>Insert Footer Text Here</h1>
+        </div>--><!--/ footer -->
+    </div><!--/data-role=page-->
+    
+    <div data-role="page" id="signUp">
+    	  <div data-role="panel" id="signupPanel" data-position="left">
+          	<div class="signIn"><img src="img/user.png" /><a href="#signIn" class="signInLink" data-transition="slide">Please Sign In</a></div>
+          	<div class="gen">General</div>
+    		<ul data-role="listview" id="list">
+                <li><a href="#booking" data-transition="slide" class="ui-btn"><img src="img/calendar-icon.png" />Book</a></li>
+                <li><a href="#" data-transition="slide" class="ui-btn"><img src="img/Bullet.png" />My Stays</a></li>
+                <li><a href="#offers" data-transition="slide" class="ui-btn"><img src="img/offers.png" />Offers</a></li>
+                <li><a href="#news" data-transition="slide" class="ui-btn"><img src="img/news.png" />News</a></li>
+                <li><a href="#about" data-transition="slide" class="ui-btn"><img src="img/about.png" />About</a></li>
+                <li><a href="#" data-transition="slide" class="ui-btn"><img src="img/share.png" />Share</a></li>
+    		</ul>
+    		<div class="signIn"><p>4.0.34 - Test Build</p></div>
+    
+		   </div><!--/ panel -->
+    	<div data-role="content" class="ui-content">
+        	<div class="ui-grid-solo bgImg">
+            	<div class="inner">
+                	<div class="ui-grid-a">
+                    	<div class="ui-block-a"><a href="#signupPanel"><img src="img/menu2.png" /></a></div>
+                        <div class="ui-block-b"><img src="img/logo.jpg"></div>
+                    </div>
+                    <div class="ui-grid-solo alignCenter">
+                    	<h2 class="welcome">Welcome</h2>
+                        <p class="welText">Please enter your login Details</p>
+                    </div>
+                    <div class="ui-grid-solo">
+                    	<form>
+                        	<input type="text" name="title" placeholder="Title" class="input" />
+                        	<input type="text" name="firstName" placeholder="First Name" class="input" />
+                        	<input type="text" name="lastName" placeholder="Last Name" class="input" />
+                        	<input type="email" name="email" placeholder="Email" class="email" />
+                        	<input type="password" name="password" placeholder="Password" class="password" />
+                        	<input type="password" name="conPass" placeholder="Confirm Password" class="password" />           
+                        </form>
+                    </div>
+                </div>
+            	<div class="roomBottom">Fill Out Details To Continue</div>
+            </div>
+        </div>
+    </div><!--/data-role=page-->
+    
+    <div data-role="page" id="code">
+    	<div data-role="content" class="ui-content">
+        	<div class="ui-grid-solo bgImg" id="height">
+            	<div class="inner">
+                	<div class="ui-grid-a">
+                    	<div class="ui-block-a"><a href="#signIn" data-transition="slide"><img src="img/Arrow-Left-icon2.png" /></a></div>
+                        <div class="ui-block-b"><img src="img/logo.jpg"></div>
+                    </div>
+                    <div class="ui-grid-solo alignCenter">
+                    	<!--<h2 class="welcome">Welcome</h2>-->
+                        <p class="welText">Please enter your email address below and you will receive a reset code if the profile exists.</p>
+                    </div>
+                    <div class="ui-grid-solo">
+                    	<form id="codeForm">
+                        	<input type="email" name="email" placeholder="Email" class="email" />
+                            <input type="button" name="button" value="Already have a code?" class="ui-btn-b" id="codeBtn" />
+                        </form>
+                    </div>
+                </div>
+            	<div class="roomBottom">Enter your Email To Continue</div>
+            </div>
+        </div>
+    </div><!--/data-role=page-->
+    
+    <div data-role="page" id="reset">
+    	<div data-role="content" class="ui-content">
+        	<div class="ui-grid-solo bgImg" id="height1">
+            	<div class="inner">
+                	<div class="ui-grid-a">
+                    	<div class="ui-block-a"><a href="#code"><img src="img/Arrow-Left-icon2.png" /></a></div>
+                        <div class="ui-block-b"><img src="img/logo.jpg"></div>
+                    </div>
+                    <div class="ui-grid-solo alignCenter">
+                    	<!--<h2 class="welcome">Welcome</h2>-->
+                        <p class="welText">If already have received you reset code please enter below along with your new password</p>
+                    </div>
+                    <div class="ui-grid-solo">
+                    	<form>
+                        	<input type="text" name="resetCode" placeholder="Reset Code" class="resetCode" />
+                        	<input type="password" name="newPassword" placeholder="New Password" class="password" />
+                        	<input type="password" name="conNewPassword" placeholder="Confirm New Password" class="password" />                            
+                        </form>
+                    </div>
+                </div>
+            	<div class="roomBottom">Please Enter Your Details To Continue</div>
+            </div>
+        </div>
+    </div><!--/data-role=page-->
+    
+    <div data-role="page" id="signIn">
+    	  <div data-role="panel" id="signinPanel" data-position="left">
+          	<div class="signIn"><img src="img/user.png" /><a href="#signIn" class="signInLink" data-transition="slide">Please Sign In</a></div>
+          	<div class="gen">General</div>
+    		<ul data-role="listview" id="list">
+                <li><a href="#booking" data-transition="slide" class="ui-btn"><img src="img/calendar-icon.png" />Book</a></li>
+                <li><a href="#" data-transition="slide" class="ui-btn"><img src="img/Bullet.png" />My Stays</a></li>
+                <li><a href="#offers" data-transition="slide" class="ui-btn"><img src="img/offers.png" />Offers</a></li>
+                <li><a href="#news" data-transition="slide" class="ui-btn"><img src="img/news.png" />News</a></li>
+                <li><a href="#about" data-transition="slide" class="ui-btn"><img src="img/about.png" />About</a></li>
+                <li><a href="#" data-transition="slide" class="ui-btn"><img src="img/share.png" />Share</a></li>
+    		</ul>
+    		<div class="signIn"><p>4.0.34 - Test Build</p></div>
+    
+		   </div><!--/ panel -->
+    
+    	<div data-role="content" class="ui-content">
+        	<div class="ui-grid-solo bgImg">
+            	<div class="inner">
+                	<div class="ui-grid-a">
+                    	<div class="ui-block-a"><a href="#signinPanel"><img src="img/menu2.png" /></a></div>
+                        <div class="ui-block-b"><img src="img/logo.jpg"></div>
+                    </div>
+                    <div class="ui-grid-solo alignCenter">
+                    	<h2 class="welcome">Welcome</h2>
+                        <p class="welText">Please either register or log in below for access to exclusive mobile only deals and offers. </p>
+                    </div>
+                    <div class="ui-grid-solo">
+                    	<form>
+                        	<input type="text" name="Email" placeholder="Email" class="input" />
+                        	<input type="password" name="password" placeholder="Password" class="password" />
+                        </form>
+                    </div>
+                        <div class="signInbtn" id="forPassword"><a href="#code" data-transition="slide" class="ui-btn">Forgot Password</a></div>
+						<div class="signInbtn" id="sign-up"><a href="#signUp" data-transition="slide" class="ui-btn">Sign Up</a></div>
+                </div>
+                <div class="roomBottom">Please Enter Your Login Details</div>
+            </div>
+        </div>
+    </div><!--/data-role=page-->  
+
+    <div data-role="page" id="booking">
+    	  <div data-role="panel" id="bookingPanel" data-position="left">
+          	<div class="signIn"><img src="img/user.png" /><a href="#signIn" class="signInLink" data-transition="slide">Please Sign In</a></div>
+          	<div class="gen">General</div>
+    		<ul data-role="listview" id="list">
+                <li><a href="#booking" data-transition="slide" class="ui-btn"><img src="img/calendar-icon.png" />Book</a></li>
+                <li><a href="#signUp" data-transition="slide" class="ui-btn"><img src="img/Bullet.png" />My Stays</a></li>
+                <li><a href="#offers" data-transition="slide" class="ui-btn"><img src="img/offers.png" />Offers</a></li>
+                <li><a href="#news" data-transition="slide" class="ui-btn"><img src="img/news.png" />News</a></li>
+                <li><a href="#about" data-transition="slide" class="ui-btn"><img src="img/about.png" />About</a></li>
+                <li><a href="#" data-transition="slide" class="ui-btn"><img src="img/share.png" />Share</a></li>
+    		</ul>
+    		<div class="signIn"><p>4.0.34 - Test Build</p></div>
+		   </div><!--/ panel -->
+        <div data-role="header">
+        	<div class="ui-grid-solo bgTheme">
+            	<div class="menu"><a href="#bookingPanel"><img src="img/menu.png" alt="menu" /></a></div>
+                <div class="ribbon"><img src="img/ribbon.png" /></div>
+                <div class="pageName">Make Your Booking</div>
+                <p class="clear"></p>
+            </div>
+        </div><!--/ header -->
+        <div data-role="main" class="ui-content mainPad">
+        	<div class="ui-grid-solo bookingHeadBdr">
+            	<div class="bookingHead">
+            		<a href="#"><span><img src="img/hotel.png" style="margin-right:15px;"/></span><span class="bookingAnchor">Find a Hotel</span></a>
+                </div>
+            </div>
+            <div class="ui-grid-a borderBottom pb15">
+            	<div class="ui-block-a" style="width:50%; padding:15px 15px 15px 0px;">
+            		<div class="checkIn">
+                    	<div class="checkLabel">Check In Date</div>
+                        <div class="ui-input-text ui-corner-all ui-shadow-inset">
+                        	<input type="text" class="txtCenter" value="" id="dpd1" >
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-block-b" style="width:50%; padding:15px 0px 15px 15px;">
+                	<div class="checkIn">
+                    	<div class="checkLabel">Check Out Date</div>
+                        <div class="ui-input-text ui-corner-all ui-shadow-inset">
+                        	<input type="text" class="txtCenter" value="" id="dpd2" >
+                        </div>
+                    </div>
+                </div>
+            </div><!--/ ui-grid-a -->
+            <div class="ui-grid-solo bookGrid">
+            	<div class="bedLeft"><img src="img/minus.png" /></div>
+                <div class="widthFull">
+                	<img src="img/icon_multiroom.png" class="mr20" />
+                    <span class="bedNumber">1</span><span class="bedRoom">Room</span>
+                </div>
+                <div class="bedRight"><img src="img/plus.png" /></div>
+            </div>
+            <div class="ui-grid-solo p15">
+            	<div class="roomOccopied">
+                	<div class="roomOccoTop">Room One Occopants</div>
+                    <div class="roomOccoBottom">
+                    	<div class="occoLeft"><img src="img/icon_code_corporate.png"><span>2</span><span>Adults</span></div>
+                        <div class="occoRight"><img src="img/icon_child.png"><span>0</span><span>Children</span></div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/ content -->
+    </div><!--/data-role=page-->
     <script src="js/jquery-2.1.4.min.js"></script>
 	<script src="js/jquery.mobile-1.4.5.min.js"></script>
     <script src="js/jssor.slider.mini.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>    
     <script type="text/javascript" src="cordova.js"></script>	
     <script>
             jQuery(document).ready(function ($) {
@@ -176,5 +470,52 @@
         });
     
     </script>
+    <script>
+	$(document).ready(function(){
+		resizeDiv();
+	});
+    window.onresize = function(event) {
+		resizeDiv();
+	}
+
+	function resizeDiv() {
+	vph = $(window).height();
+	$("#height").css({'height': vph + 'px'});
+	$("#height1").css({'height': vph + 'px'});
+	}
+	
+	$('#codeBtn').click(function(){
+		window.location="#reset"
+;		});
+    </script>
+          	<script>
+
+        // disabling dates
+        var nowTemp = new Date();
+        var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+		
+        var checkin = $('#dpd1').datepicker({
+          onRender: function(date) {
+            return date.valueOf() < now.valueOf() ? 'disabled' : '';
+          }
+        }).on('changeDate', function(ev) {
+          if (ev.date.valueOf() > checkout.date.valueOf()) {
+            var newDate = new Date(ev.date)
+            newDate.setDate(newDate.getDate() + 1);
+            checkout.setValue(newDate);
+          }
+          checkin.hide();
+          $('#dpd2')[0].focus();
+        }).data('datepicker');
+        var checkout = $('#dpd2').datepicker({
+          onRender: function(date) {
+            return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
+          }
+        }).on('changeDate', function(ev) {
+          checkout.hide();
+        }).data('datepicker');
+		
+	</script>
+    
 </body>
 </html>

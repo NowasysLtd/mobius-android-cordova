@@ -1,0 +1,142 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face {
+    font-family: gothic;
+    src: url(ufonts.com_century-gothic.ttf);
+}
+*{	text-shadow: 0 /*{b-bar-shadow-x}*/ 0px /*{b-bar-shadow-y}*/ 0 /*{b-bar-shadow-radius}*/ 	#111 /*{b-bar-shadow-color}*/;
+	box-shadow: inset 0 0px 0px /*{global-box-shadow-size} rgba(0,0,0,.2) /*{global-box-shadow-color}*/;
+    outline: -webkit-focus-ring-color auto 0px;}
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
+    border-color: rgba(82, 168, 236, 0.8);
+    outline: 0;
+    outline: thin dotted \9;
+    -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075), 0 0 0px rgba(82, 168, 236, 0.6);
+    -moz-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075), 0 0 0px rgba(82, 168, 236, 0.6);
+    box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075), 0 0 0px rgba(82, 168, 236, 0.6);
+}
+
+
+.menu{position: relative; width: 36px; height: 26px; padding-top: 7px; padding-bottom: 7px; float:left;}
+.bgTheme{ background-color:#e6ddce !important;}
+.ribbon{position: relative; margin: 7px 7px 0px 7px; float: left;}
+.pageName{position:relative; color:#7a3633; float:left; font-size:23px; margin-top:7px;}
+.clear{ clear:both;}
+.imgResponsive{ width:100%; height:auto;}
+.imgText{ position: absolute; bottom: 0px; width: 100%; color: #7a3633; background: rgba(230,221,206,0.7); font-weight: 600; font-size: 18px; font-family: gothic; padding-left: 15px; padding-top: 20px; padding-bottom: 20px;}
+.ui-content{ padding:0;}
+.mainPad{padding-left:15px !important; padding-right:15px !important;}
+.contentBorder{ position: relative; border-bottom: 2px solid #7a3633;}
+.signIn{ position:relative; padding:16px;}
+.signIn img{ width: 65px; border-radius: 50%;}
+.signInLink{ position: absolute; top: 42px; right: 56px; font-family:gothic; text-decoration:none; color:#7a3633 !important;}
+.gen{ border-bottom: 2px solid #d2d2d2; padding-bottom: 7px; padding-left:3px}
+.ui-page-theme-a .ui-btn{ font-family:gothic;}
+.ui-listview > .ui-li-has-thumb > .ui-btn{ min-height:auto; padding-left:5.26em; padding-top:25px; padding-bottom:25px;}
+.ui-listview > .ui-li-has-thumb img{ top: 16px !important; left: 16px !important;}
+
+        /* jssor slider bullet navigator skin 05 css */
+        /*
+        .jssorb05 div           (normal)
+        .jssorb05 div:hover     (normal mouseover)
+        .jssorb05 .av           (active)
+        .jssorb05 .av:hover     (active mouseover)
+        .jssorb05 .dn           (mousedown)
+        */
+		body{ margin:0;}
+		#firstpage{background-color:#FDF3E2;}
+		#jssor_1{height:100%;
+		}
+        .jssorb05 {
+            position: absolute;
+        }
+        .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+            position: absolute;
+            /* size of bullet elment */
+            width: 16px;
+            height: 16px;
+            background: url(../img/slider/b05.png) no-repeat;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .jssorb05 div { background-position: -7px -7px; }
+        .jssorb05 div:hover, .jssorb05 .av:hover { background-position: -37px -7px; }
+        .jssorb05 .av { background-position: -67px -7px; }
+        .jssorb05 .dn, .jssorb05 .dn:hover { background-position: -97px -7px; }
+
+        /* jssor slider arrow navigator skin 22 css */
+        /*
+        .jssora22l                  (normal)
+        .jssora22r                  (normal)
+        .jssora22l:hover            (normal mouseover)
+        .jssora22r:hover            (normal mouseover)
+        .jssora22l.jssora22ldn      (mousedown)
+        .jssora22r.jssora22rdn      (mousedown)
+        */
+        .jssora22l, .jssora22r {
+            display: block;
+            position: absolute;
+            /* size of arrow element */
+            width: 40px;
+            height: 58px;
+            cursor: pointer;
+            background: url(../img/slider/a22.png) center center no-repeat;
+            overflow: hidden;
+        }
+        .jssora22l { background-position: -10px -31px; }
+        .jssora22r { background-position: -70px -31px; }
+        .jssora22l:hover { background-position: -130px -31px; }
+        .jssora22r:hover { background-position: -190px -31px; }
+        .jssora22l.jssora22ldn { background-position: -250px -31px; }
+        .jssora22r.jssora22rdn { background-position: -310px -31px; }
+		.slid_text{position:relative; z-index:1; text-align:center; bottom:190px; color:#000;}
+		.slid_img{position:relative; overflow-y:hidden; width:100%; height:100%;}
+		
+.continue-btn .ui-btn{background-color:#15A869 !important; color:#fff !important; border:none; margin:0; padding:1.3em; font-family:gothic;}
+.roomTop{ background:#464d55; color: #fff !important; font-family:gothic; text-align:center;}
+.room{ display: inline-block; margin-top: 12px; margin-bottom: 12px; border-right: 1px solid #fff; padding-right: 15px;}
+.room img, .persons img{ width: 40px; height: auto;}
+.roomInner{ display: inline-block; margin-left: 15px; font-size: 14px;}
+.persons{ display: inline-block; margin-top: 12px; margin-bottom: 12px; padding-left: 15px;}
+.personsInner{ display: inline-block; margin-left: 15px; font-size: 14px;}
+.imgTextRoom{ position: absolute; bottom: 0px; width: 100%; color: #7a3633; background: rgba(230,221,206,0.7); font-weight: 600; font-size: 18px; font-family: gothic; padding-top: 10px; padding-bottom: 10px;}
+.textRoomLeft{ position: relative; float: left; padding-left: 15px;}
+.textRoomLeft span{ font-weight: 100; margin-right: 5px;}
+.textRoomRight{ position: relative; float: right; padding-right: 35px; margin-top: 8px;}
+.roomBottom{ position:fixed; bottom:0px; background:#898989; width:100%; height:auto; color:#fff !important; font-family:gothic;text-align: center; padding-top: 12px; padding-bottom: 12px; font-size: 18px;}
+.pb47{ padding-bottom:47px;}
+.bgImg{ background:url(../img/signIn.jpg) no-repeat fixed; background-size:100%;}
+.inner{ margin:20px 30px 47px 30px; background: rgba(0,0,0,0.6); padding:15px; border-radius:10px;}
+.ui-grid-a > .ui-block-a { width: 45%;}
+.ui-grid-a > .ui-block-b { width:55%;}
+.alignCenter{ text-align:center;}
+.welcome{ color: #fff; font-size: 56px; font-weight: 100; margin-top: 0px; margin-bottom: 0px;}
+.welText{ color: #fff; font-family: gothic; font-size: 18px; margin-top: 7px;}
+.input{ background: url(../img/mailIcon.jpg) no-repeat 5px !important; padding-left: 46px !important; padding-top: 12px !important; padding-bottom: 12px !important;}
+.email{ background: url(../img/email.png) no-repeat 5px !important; padding-left: 46px !important; padding-top: 12px !important; padding-bottom: 12px !important;}
+.password{ background: url(../img/passwordIcon.jpg) no-repeat 5px !important; padding-left: 46px !important; padding-top: 12px !important; padding-bottom: 12px !important;}
+.resetCode{ background: url(../img/code.jpg) no-repeat 5px !important; padding-left: 46px !important; padding-top: 12px !important; padding-bottom: 12px !important;}
+.ui-input-text, .ui-input-search { margin: 1em 0;}
+#codeForm .ui-btn{ background-color: transparent; border-color: #fff; color: #fff; text-shadow: 0 0px 0 #f3f3f3; margin-top:50px; }
+#forPassword .ui-btn{ background-color: transparent; border-color: #fff; color: #fff; text-shadow: 0 0px 0 #f3f3f3; margin-top:50px;border-radius:5px; }
+#sign-up .ui-btn{ background-color: transparent; border-color: #fff; color: #fff; text-shadow: 0 0px 0 #f3f3f3; margin-top:16px; border-radius:5px; }
+.signIn p {color: #7a3633; font-family: gothic; font-size: 18px; margin-top: 10px; margin-bottom: 10px;}
+.bookingHeadBdr{ border-top: 1px solid #a6a6a6; border-bottom: 1px solid #a6a6a6; margin-top: 12px; margin-bottom: 12px;}
+.bookingHead{ position: relative; margin-left: auto; margin-right: auto; padding-top: 12px; width: 145px; padding-bottom: 12px;}
+.bookingAnchor{ top: 20px; position: absolute; font-family: gothic; color: #bebebe; text-shadow: 0 0 0 !important;}
+.p15{ padding:15px;}
+.checkIn{ border: 2px solid #a6a6a6; border-radius: 5px;}
+.checkLabel{ padding: 10px; text-align: center; background: #ebebeb; color: #7a3633; font-family: gothic; font-size: 14px; border-radius: 5px 5px 0 0;}
+.txtCenter{ text-align:center !important;}
+input[type="text"]{ background-color: #ffffff; border: 0px solid #cccccc; -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075); -moz-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075); box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075); margin-bottom: 0px;}
+#dpd1, #dpd2{ color: #7a3633; font-size: 18px;}
+.borderBottom{ border-bottom: 1px solid #a6a6a6;}
+.pb15{ padding-bottom: 15px;}
+.bookGrid{ position: relative;  padding-top: 15px; padding-bottom: 15px; border-bottom: 1px solid #a6a6a6;}
+.bedLeft{ position: absolute; width: 36px; height: auto; left: 10px; top: 19px;}
+.bedRight{ position: absolute; right: 10px; width: 36px; top: 12px;}
+.widthFull{ position: relative; margin: auto; text-align: center;}
+.mr20{ margin-right:20px;}
+.bedNumber{ margin-right: 10px; color: #7a3633; font-size: 22px; top: 5px; position: relative;}
+.bedRoom{ color: #7a3633; font-size: 22px; top: 5px; position: relative;}
+.padTopBottom{ padding-bottom: 15px; padding-top:15px;}
