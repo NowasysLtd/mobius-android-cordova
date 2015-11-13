@@ -363,7 +363,7 @@
         </div>
     </div><!--/data-role=page-->  
 
-    <div data-role="page" id="booking">
+    <div data-role="page" id="booking" class="pb60">
     	  <div data-role="panel" id="bookingPanel" data-position="left">
           	<div class="signIn"><img src="img/user.png" /><a href="#signIn" class="signInLink" data-transition="slide">Please Sign In</a></div>
           	<div class="gen">General</div>
@@ -410,29 +410,89 @@
                 </div>
             </div><!--/ ui-grid-a -->
             <div class="ui-grid-solo bookGrid">
-            	<div class="bedLeft"><img src="img/minus.png" /></div>
+            	<!--<div class="bedLeft"><img src="img/minus.png" /></div>-->
                 <div class="widthFull">
                 	<img src="img/icon_multiroom.png" class="mr20" />
                     <span class="bedNumber">1</span><span class="bedRoom">Room</span>
                 </div>
-                <div class="bedRight"><img src="img/plus.png" /></div>
+                <div class="bedRight" id="increase"><img src="img/plus.png" /></div>
             </div>
-            <div class="ui-grid-solo p15">
+            <div class="ui-grid-solo bookGrid" id="appendDiv">
             	<div class="roomOccopied">
-                	<div class="roomOccoTop">Room One Occopants</div>
-                    <div class="roomOccoBottom">
-                    	<div class="occoLeft"><img src="img/icon_code_corporate.png"><span>2</span><span>Adults</span></div>
-                        <div class="occoRight"><img src="img/icon_child.png"><span>0</span><span>Children</span></div>
+                	<div class="roomOccoTop">Room 1 Occopants</div>
+                    <!--<div class="minus1"><img src="img/minus1.png" /></div>-->
+                    <div class="ui-grid-a">
+                    	<div class="ui-block-a txtCenter p15" style="width:50%;">
+                        	<img src="img/icon_code_corporate.png" class="mr10">
+                            <span class="numbe">2</span><span class="pers">Adults</span>
+                        </div>
+                        <div class="ui-block-b txtCenter p15" style="width:50%">
+                        	<img src="img/icon_child.png" class="mr10">
+                            <span class="numbe">0</span><span class="pers">Children</span>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </div><!-- / ui-grid-solo -->
+            <div class="ui-grid-solo bookGrid">
+                <div class="widthFull">
+                	<a href="#popupDialog" data-rel="popup" data-position-to="window" data-transition="pop"><img src="img/icon_rates1.png" class="mr20" />
+                    <span class="bedRating" id="bedRat">Bed and Breakfast</span></a>
+                </div>
+                <div data-role="popup" class="bgWhite" id="popupDialog" data-overlay-theme="a" data-theme="a" data-dismissible="false" style="max-width:400px;">
+                    <div data-role="header" data-theme="a" class="bgWhite popBB">
+                    <h1 class="popH1">Rates</h1>
+                    </div>
+                    <div role="main" class="ui-content">
+                        <form class="popForm" id="popForm">
+                            <fieldset data-role="controlgroup" class="mbtZero">
+                                <input type="radio" name="radio-choice-v-2" id="radio-choice-v-2a" value="Bed and Breakfast" checked="checked">
+                                <label for="radio-choice-v-2a" class="popRadio">Bed and Breakfast</label>
+                                <input type="radio" name="radio-choice-v-2" id="radio-choice-v-2b" value="Bed and Pampering">
+                                <label for="radio-choice-v-2b" class="popRadio">Bed and Pampering</label>
+                            </fieldset>
+                        </form>
+                        <a href="#" class="ui-btn ui-btn-a popBtn" id="popBtn" data-rel="back" data-transition="flow">Ok</a>
+                    </div>
+                </div>
+            </div><!--/ ui-grid-solo -->
+            <div class="ui-grid-solo bookGrid2">
+                <div class="widthFull">
+                	<img src="img/icon_add_code1.png" class="mr20" />
+                    <span class="bedRating">Enter a Code</span>
+                </div>
+            </div><!--/ ui-grid-solo -->
         </div><!--/ content -->
+        <div class="bookBottom"><a href="#hotels">Please Choose your Hotel</a></div>                      
     </div><!--/data-role=page-->
-    <script src="js/jquery-2.1.4.min.js"></script>
-	<script src="js/jquery.mobile-1.4.5.min.js"></script>
-    <script src="js/jssor.slider.mini.js"></script>
-    <script src="js/bootstrap-datepicker.js"></script>    
-    <script type="text/javascript" src="cordova.js"></script>	
+      
+    <div data-role="page" id="hotels">
+        <div data-role="header">
+        	<div class="ui-grid-solo bgTheme">
+            	<div class="menu"><a href="#booking"><img src="img/Arrow-Left-icon.png" alt="Left Arrow" /></a></div>
+                <div class="ribbon"><img src="img/ribbon.png" /></div>
+                <div class="pageName">Select your hotel</div>
+                <p class="clear"></p>
+            </div>
+        </div><!--/ header -->
+        <div data-role="main" class="ui-content">
+        	<div class="ui-grid-solo contentBorder">
+            	<img src="img/antalya.jpg" class="imgResponsive" />
+                <div class="imgText">Fantastic Antalya</div>
+            </div><!--/ ui-grid-solo -->
+        	<div class="ui-grid-solo contentBorder">
+            	<img src="img/cappadocia.jpg" class="imgResponsive" />
+                <div class="imgText">Fantastic Cappadocia</div>
+            </div><!--/ ui-grid-solo -->
+        	<div class="ui-grid-solo contentBorder">
+            	<img src="img/kusadasi.jpg" class="imgResponsive" />
+                <div class="imgText">Fantastic Kusadasi</div>
+            </div><!--/ ui-grid-solo -->
+        </div><!--/ content -->
+        <!--<div data-role="footer">
+        	<h1>Insert Footer Text Here</h1>
+        </div>--><!--/ footer -->
+    </div><!--/data-role=page-->
+    
     <script>
             jQuery(document).ready(function ($) {
             
@@ -516,6 +576,40 @@
         }).data('datepicker');
 		
 	</script>
+    <script>
+    var fullDate = new Date()
+	//Thu May 19 2011 17:25:38 GMT+1000 {}
+	 
+	//convert month to 2 digits
+	var twoDigitMonth = ((fullDate.getMonth().length+1) === 1)? (fullDate.getMonth()+1) : (fullDate.getMonth()+1);
+	var mnth = fullDate.getDate();
+	var currentDate = mnth + "/" + twoDigitMonth + "/" + fullDate.getFullYear();
+	var nextDate = ++mnth + "/" + twoDigitMonth + "/" + fullDate.getFullYear();
+	$('#dpd1').val(currentDate);
+	$('#dpd2').val(nextDate);
+	
+	// append div dynamically
+    var bed = $('.bedNumber').text();
+	$('#increase').click(function(){
+		bed++;
+		//alert(bed);
+		$('.bedNumber').text(bed);
+		$('#appendDiv').append('<div class="roomOccopied mt15"><div class="roomOccoTop">Room <span class="bedNumb">'+bed+'</span> Occopants</div><div class="minus1"><img src="img/minus1.png" /></div><div class="ui-grid-a"><div class="ui-block-a txtCenter p15" style="width:50%;"><img src="img/icon_code_corporate.png" class="mr10"><span class="numbe">2</span><span class="pers">Adults</span></div><div class="ui-block-b txtCenter p15" style="width:50%"><img src="img/icon_child.png" class="mr10"><span class="numbe">0</span><span class="pers">Children</span></div></div></div>');
+	});
+	// remove div one by one
+		$('#appendDiv').on('click','.minus1',function() {
+			$(this).closest('.roomOccopied').remove();
+			bed--;
+			$('.bedNumber').text(bed);
+		});	
+		
+	// getting radio buttons value
+		$('#popBtn').click(function() {
+		   var radio = $('input[name=radio-choice-v-2]:checked', '#popForm').val();
+		   $('#bedRat').html(radio); 
+		});	
+    
+    </script>
     
 </body>
 </html>

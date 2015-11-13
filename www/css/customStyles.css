@@ -22,6 +22,7 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 .ribbon{position: relative; margin: 7px 7px 0px 7px; float: left;}
 .pageName{position:relative; color:#7a3633; float:left; font-size:23px; margin-top:7px;}
 .clear{ clear:both;}
+p.clear{ clear:both; margin-top:0px !important; margin-bottom:0px !important;}
 .imgResponsive{ width:100%; height:auto;}
 .imgText{ position: absolute; bottom: 0px; width: 100%; color: #7a3633; background: rgba(230,221,206,0.7); font-weight: 600; font-size: 18px; font-family: gothic; padding-left: 15px; padding-top: 20px; padding-bottom: 20px;}
 .ui-content{ padding:0;}
@@ -104,6 +105,9 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 .textRoomLeft span{ font-weight: 100; margin-right: 5px;}
 .textRoomRight{ position: relative; float: right; padding-right: 35px; margin-top: 8px;}
 .roomBottom{ position:fixed; bottom:0px; background:#898989; width:100%; height:auto; color:#fff !important; font-family:gothic;text-align: center; padding-top: 12px; padding-bottom: 12px; font-size: 18px;}
+.bookBottom{position: fixed; bottom: 0px; background: #898989; width: 100%; height: auto; color: #fff !important; font-family: gothic; text-align: center; font-size: 18px; z-index:99999;}
+.bookBottom a { color: #fff !important; text-decoration: none; font-weight: 100; display: block; padding-top: 15px; padding-bottom: 15px;}
+.bookBottom a:hover{ color:#fff !important;}
 .pb47{ padding-bottom:47px;}
 .bgImg{ background:url(../img/signIn.jpg) no-repeat fixed; background-size:100%;}
 .inner{ margin:20px 30px 47px 30px; background: rgba(0,0,0,0.6); padding:15px; border-radius:10px;}
@@ -133,10 +137,30 @@ input[type="text"]{ background-color: #ffffff; border: 0px solid #cccccc; -webki
 .borderBottom{ border-bottom: 1px solid #a6a6a6;}
 .pb15{ padding-bottom: 15px;}
 .bookGrid{ position: relative;  padding-top: 15px; padding-bottom: 15px; border-bottom: 1px solid #a6a6a6;}
+.bookGrid2{ position: relative;  padding-top: 15px; padding-bottom: 15px; border-bottom: 1px solid #a6a6a6; border-top:1px solid #a6a6a6; margin-top:15px;}
 .bedLeft{ position: absolute; width: 36px; height: auto; left: 10px; top: 19px;}
 .bedRight{ position: absolute; right: 10px; width: 36px; top: 12px;}
 .widthFull{ position: relative; margin: auto; text-align: center;}
+.widthFull a{ text-decoration:none; font-weight:100;}
 .mr20{ margin-right:20px;}
+.mr10{ margin-right:10px;}
 .bedNumber{ margin-right: 10px; color: #7a3633; font-size: 22px; top: 5px; position: relative;}
 .bedRoom{ color: #7a3633; font-size: 22px; top: 5px; position: relative;}
 .padTopBottom{ padding-bottom: 15px; padding-top:15px;}
+.roomOccopied{ border: 2px solid #a6a6a6; border-radius: 5px; position:relative;}
+.roomOccoTop{text-align: center;color: #5f0d0c; font-size: 18px; background: #ebebeb; padding: 10px; border-radius: 5px 5px 0 0;}
+.numbe{ margin-right: 10px; color: #5f0d0c; font-size: 14px; font-family: gothic; top: 6px; position: relative;}
+.pers{color: #5f0d0c; font-size: 14px; font-family: gothic; top: 6px; position: relative;}
+.minus1{ position: absolute; right: 5px; top: 9px;}
+.mt15{ margin-top:15px;}
+.bedRating{ color: #a3a3a3; font-family: gothic; font-size: 15px;}
+.bgWhite{ background:#fff !important;}
+.popH1{color: #5f0d0c; padding-bottom: 0px !important; padding-top: 0px !important; font-family: gothic; font-size: 20px !important; margin: 0px 0px 0px 15px !important; text-align: left !important; font-weight:100 !important;}
+.popBB{border-bottom: 1px solid #5f0d0c;}
+.ui-btn.ui-radio-on.ui-btn-a:after{border-color: #7c3a39 !important;}
+.popRadio{ padding: 1em 3em; border-top: 0px !important; border-right: 0px !important; border-left: 0px !important; border-bottom: 1px solid #7c3a39;}
+.popRadio:hover, .popBtn:hover{ background-color:#fff !important; color:#7c3a39;}
+.mbtZero{ margin-bottom:0px; margin-top:0px;}
+.popForm{ width: 350px !important; margin-bottom: 0px !important;}
+.popBtn{ margin: 0px !important; border: 0px !important;}
+.pb60{ padding-bottom:60px !important;}
