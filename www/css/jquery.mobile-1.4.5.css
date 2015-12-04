@@ -4485,7 +4485,7 @@ html .ui-popup .ui-field-contain > label + .ui-flipswitch {
 }
 /* Panel */
 .ui-panel {
-	width: 17em;
+	width: 22em;
 	min-height: 100%;
 	max-height: none;
 	border-width: 0;
@@ -4633,9 +4633,9 @@ html .ui-popup .ui-field-contain > label + .ui-flipswitch {
 .ui-panel-animate.ui-panel-page-content-position-left {
 	left: 0;
 	right: 0;
-	-webkit-transform: translate3d(17em,0,0);
-	-moz-transform: translate3d(17em,0,0);
-	transform: translate3d(17em,0,0);
+	-webkit-transform: translate3d(22em,0,0);
+	-moz-transform: translate3d(22em,0,0);
+	transform: translate3d(22em,0,0);
 }
 /* Panel right open */
 .ui-panel-page-content-position-right {

@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/datepicker.css">    
     <link rel="stylesheet" href="css/customStyles.css" />    
-	
+    <script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/jssor.slider.mini.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>	
 </head>
 <body>
 	<section id="firstpage" data-role="page">
@@ -24,18 +27,18 @@
         </div>
         <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 480px; height: 800px; overflow: hidden;">
             <div data-p="225.00" style="display: none;">
-                <div class="slid_img"><img data-u="image" src="img/slider/slide1.jpg" /></div>
-                <div class="slid_text">Lorem Ipsum Site a mate kjdkf adjkasdfh Lorem Ipsum Site a mate kjdkf adjkasd fhLorem Ipsum Site a mate kjdkf adjkasdfh Lorem Ipsum Site a mate kjdkf adjkasdfh Lorem Ipsum Site a mate kjdkf adjkasdfh</div>
+                <div class="slid_img"><img data-u="image" src="img/slider/slide1.png" /></div>
+                <div class="slid_text">Relax in our wellness area Lindtner Medical Spa & Beauty or discover our partner golf courses.</div>
             </div>
             
             <div data-p="225.00" style="display: none;">
-                <div class="slid_img"><img data-u="image" src="img/slider/slide2.jpg" /></div>
-                <div class="slid_text">hdkdjhw hjsjd bsdmNSDB Mm  BSDJ hdkdjhw hjsjd bsdmNSDB Mm  BSDJ hdkdjhw hjsjd bsdmNSDB Mm  BSDJ hdkdjhw hjsjd bsdmNSDB Mm  BSDJ hdkdjhw hjsjd bsdmNSDB Mm  BSDJ  </div>
+                <div class="slid_img"><img data-u="image" src="img/slider/slide2.png" /></div>
+                <div class="slid_text">Diversified events in and around Hamburg, complete your residence in the beautiful city.</div>
             </div>
             
             <div data-p="225.00" style="display: none;">
-                <div class="slid_img"><img data-u="image" src="img/slider/slide3.jpg" /></div>
-                <div class="slid_text">kjsdf khskdjfjhbsd bsdfsd kjs kjsdf khskdjfjhbsd bsdfsd kjs kjsdf khskdjfjhbsd bsdfsd kjs kjsdf khskdjfjhbsd bsdfsd kjs kjsdf khskdjfjhbsd bsdfsd kjs </div>
+                <div class="slid_img"><img data-u="image" src="img/slider/slide3.png" /></div>
+                <div class="slid_text">Our sincere staff create outstanding hospitality and deliver personal well-being.</div>
             </div>
         </div>
         <!-- Bullet Navigator -->
@@ -64,7 +67,7 @@
           	<div class="gen">General</div>
     		<ul data-role="listview" id="list">
                 <li><a href="#booking" data-transition="slide" class="ui-btn"><img src="img/calendar-icon.png" />Book</a></li>
-                <li><a href="#" data-transition="slide" class="ui-btn"><img src="img/Bullet.png" />My Stays</a></li>
+                <li><a href="#" data-transition="slide" class="ui-btn"><img src="img/Bullet.png" class="mt5" />My Stays</a></li>
                 <li><a href="#offers" data-transition="slide" class="ui-btn"><img src="img/offers.png" />Offers</a></li>
                 <li><a href="#news" data-transition="slide" class="ui-btn"><img src="img/news.png" />News</a></li>
                 <li><a href="#about" data-transition="slide" class="ui-btn"><img src="img/about.png" />About</a></li>
@@ -74,7 +77,7 @@
 		   </div><!--/ panel -->
         <div data-role="header">
         	<div class="ui-grid-solo bgTheme">
-            	<div class="menu"><a href="#newsPanel"><img src="img/menu.png" alt="menu" /></a></div>
+            	<div class="menu"><a href="#newsPanel"><img src="img/ic_drawer.png" alt="menu" /></a></div>
                 <div class="ribbon"><img src="img/ribbon.png" /></div>
                 <div class="pageName">News</div>
                 <p class="clear"></p>
@@ -94,9 +97,6 @@
                 <div class="imgText">Fantastic Kusadasi</div>
             </div><!--/ ui-grid-solo -->
         </div><!--/ content -->
-        <!--<div data-role="footer">
-        	<h1>Insert Footer Text Here</h1>
-        </div>--><!--/ footer -->
     </div><!--/data-role=page-->
 
     <div data-role="page" id="offers">
@@ -105,7 +105,7 @@
           	<div class="gen">General</div>
     		<ul data-role="listview" id="list">
                 <li><a href="#booking" data-transition="slide" class="ui-btn"><img src="img/calendar-icon.png" />Book</a></li>
-                <li><a href="#" data-transition="slide" class="ui-btn"><img src="img/Bullet.png" />My Stays</a></li>
+                <li><a href="#" data-transition="slide" class="ui-btn"><img src="img/Bullet.png" class="mt5" />My Stays</a></li>
                 <li><a href="#offers" data-transition="slide" class="ui-btn"><img src="img/offers.png" />Offers</a></li>
                 <li><a href="#news" data-transition="slide" class="ui-btn"><img src="img/news.png" />News</a></li>
                 <li><a href="#about" data-transition="slide" class="ui-btn"><img src="img/about.png" />About</a></li>
@@ -116,7 +116,7 @@
 		   </div><!--/ panel -->
         <div data-role="header">
         	<div class="ui-grid-solo bgTheme">
-            	<div class="menu"><a href="#offerPanel"><img src="img/menu.png" alt="menu" /></a></div>
+            	<div class="menu"><a href="#offerPanel"><img src="img/ic_drawer.png" alt="menu" /></a></div>
                 <div class="ribbon"><img src="img/ribbon.png" /></div>
                 <div class="pageName">Offers</div>
                 <p class="clear"></p>
@@ -136,9 +136,6 @@
                 <div class="imgText">Fantastic Kusadasi</div>
             </div><!--/ ui-grid-solo -->
         </div><!--/ content -->
-        <!--<div data-role="footer">
-        	<h1>Insert Footer Text Here</h1>
-        </div>--><!--/ footer -->
     </div><!--/data-role=page-->
     
     <div data-role="page" id="about">
@@ -147,7 +144,7 @@
           	<div class="gen">General</div>
     		<ul data-role="listview" id="list">
                 <li><a href="#booking" data-transition="slide" class="ui-btn"><img src="img/calendar-icon.png" />Book</a></li>
-                <li><a href="#" data-transition="slide" class="ui-btn"><img src="img/Bullet.png" />My Stays</a></li>
+                <li><a href="#" data-transition="slide" class="ui-btn"><img src="img/Bullet.png" class="mt5" />My Stays</a></li>
                 <li><a href="#offers" data-transition="slide" class="ui-btn"><img src="img/offers.png" />Offers</a></li>
                 <li><a href="#news" data-transition="slide" class="ui-btn"><img src="img/news.png" />News</a></li>
                 <li><a href="#about" data-transition="slide" class="ui-btn"><img src="img/about.png" />About</a></li>
@@ -158,7 +155,7 @@
 		   </div><!--/ panel -->
         <div data-role="header">
         	<div class="ui-grid-solo bgTheme">
-            	<div class="menu"><a href="#aboutPanel"><img src="img/menu.png" alt="menu" /></a></div>
+            	<div class="menu"><a href="#aboutPanel"><img src="img/ic_drawer.png" alt="menu" /></a></div>
                 <div class="ribbon"><img src="img/ribbon.png" /></div>
                 <div class="pageName">About</div>
                 <p class="clear"></p>
@@ -178,9 +175,6 @@
                 <div class="imgText">Fantastic Kusadasi</div>
             </div><!--/ ui-grid-solo -->
         </div><!--/ content -->
-        <!--<div data-role="footer">
-        	<h1>Insert Footer Text Here</h1>
-        </div>--><!--/ footer -->
     </div><!--/data-role=page-->
     
     <div data-role="page" id="roomList" class="pb47">
@@ -226,9 +220,6 @@
             </div><!--/ ui-grid-solo -->
             <div class="roomBottom">Please Select A Room</div>
         </div><!--/ content -->
-        <!--<div data-role="footer">
-        	<h1>Insert Footer Text Here</h1>
-        </div>--><!--/ footer -->
     </div><!--/data-role=page-->
     
     <div data-role="page" id="signUp">
@@ -237,7 +228,7 @@
           	<div class="gen">General</div>
     		<ul data-role="listview" id="list">
                 <li><a href="#booking" data-transition="slide" class="ui-btn"><img src="img/calendar-icon.png" />Book</a></li>
-                <li><a href="#" data-transition="slide" class="ui-btn"><img src="img/Bullet.png" />My Stays</a></li>
+                <li><a href="#" data-transition="slide" class="ui-btn"><img src="img/Bullet.png" class="mt5" />My Stays</a></li>
                 <li><a href="#offers" data-transition="slide" class="ui-btn"><img src="img/offers.png" />Offers</a></li>
                 <li><a href="#news" data-transition="slide" class="ui-btn"><img src="img/news.png" />News</a></li>
                 <li><a href="#about" data-transition="slide" class="ui-btn"><img src="img/about.png" />About</a></li>
@@ -247,11 +238,11 @@
     
 		   </div><!--/ panel -->
     	<div data-role="content" class="ui-content">
-        	<div class="ui-grid-solo bgImg">
+        	<div class="ui-grid-solo bgImg height">
             	<div class="inner">
-                	<div class="ui-grid-a">
-                    	<div class="ui-block-a"><a href="#signupPanel"><img src="img/menu2.png" /></a></div>
-                        <div class="ui-block-b"><img src="img/logo.jpg"></div>
+                	<div class="ui-grid-solo">
+                    	<div class="menu-white"><a href="#signupPanel"><img src="img/menu2.png" /></a></div>
+                        <div class="logo-sign"><img src="img/logo.jpg"></div>
                     </div>
                     <div class="ui-grid-solo alignCenter">
                     	<h2 class="welcome">Welcome</h2>
@@ -278,17 +269,17 @@
         	<div class="ui-grid-solo bgImg" id="height">
             	<div class="inner">
                 	<div class="ui-grid-a">
-                    	<div class="ui-block-a"><a href="#signIn" data-transition="slide"><img src="img/Arrow-Left-icon2.png" /></a></div>
-                        <div class="ui-block-b"><img src="img/logo.jpg"></div>
+                    	<div class="menu-white"><a href="#signIn" data-transition="slide"><img src="img/Arrow-Left-icon2.png" /></a></div>
+                        <div class="logo-sign"><img src="img/logo.jpg"></div>
                     </div>
                     <div class="ui-grid-solo alignCenter">
-                    	<!--<h2 class="welcome">Welcome</h2>-->
                         <p class="welText">Please enter your email address below and you will receive a reset code if the profile exists.</p>
                     </div>
                     <div class="ui-grid-solo">
                     	<form id="codeForm">
                         	<input type="email" name="email" placeholder="Email" class="email" />
-                            <input type="button" name="button" value="Already have a code?" class="ui-btn-b" id="codeBtn" />
+                            <!--<input type="button" name="button" value="Already have a code?" class="ui-btn-b" id="codeBtn" >-->
+							<div class="signInbtn" id="codeBtn"><a href="#reset" data-transition="slide" class="ui-btn">Already have a code?</a></div>
                         </form>
                     </div>
                 </div>
@@ -302,11 +293,10 @@
         	<div class="ui-grid-solo bgImg" id="height1">
             	<div class="inner">
                 	<div class="ui-grid-a">
-                    	<div class="ui-block-a"><a href="#code"><img src="img/Arrow-Left-icon2.png" /></a></div>
-                        <div class="ui-block-b"><img src="img/logo.jpg"></div>
+                    	<div class="menu-white"><a href="#code" data-transition="slide"><img src="img/Arrow-Left-icon2.png" /></a></div>
+                        <div class="logo-sign"><img src="img/logo.jpg"></div>
                     </div>
                     <div class="ui-grid-solo alignCenter">
-                    	<!--<h2 class="welcome">Welcome</h2>-->
                         <p class="welText">If already have received you reset code please enter below along with your new password</p>
                     </div>
                     <div class="ui-grid-solo">
@@ -328,7 +318,7 @@
           	<div class="gen">General</div>
     		<ul data-role="listview" id="list">
                 <li><a href="#booking" data-transition="slide" class="ui-btn"><img src="img/calendar-icon.png" />Book</a></li>
-                <li><a href="#" data-transition="slide" class="ui-btn"><img src="img/Bullet.png" />My Stays</a></li>
+                <li><a href="#" data-transition="slide" class="ui-btn"><img src="img/Bullet.png" class="mt5" />My Stays</a></li>
                 <li><a href="#offers" data-transition="slide" class="ui-btn"><img src="img/offers.png" />Offers</a></li>
                 <li><a href="#news" data-transition="slide" class="ui-btn"><img src="img/news.png" />News</a></li>
                 <li><a href="#about" data-transition="slide" class="ui-btn"><img src="img/about.png" />About</a></li>
@@ -341,9 +331,9 @@
     	<div data-role="content" class="ui-content">
         	<div class="ui-grid-solo bgImg">
             	<div class="inner">
-                	<div class="ui-grid-a">
-                    	<div class="ui-block-a"><a href="#signinPanel"><img src="img/menu2.png" /></a></div>
-                        <div class="ui-block-b"><img src="img/logo.jpg"></div>
+                	<div class="ui-grid-solo">
+                    	<div class="menu-white"><a href="#signinPanel"><img src="img/menu2.png" /></a></div>
+                        <div class="logo-sign"><img src="img/logo.jpg"></div>
                     </div>
                     <div class="ui-grid-solo alignCenter">
                     	<h2 class="welcome">Welcome</h2>
@@ -369,7 +359,7 @@
           	<div class="gen">General</div>
     		<ul data-role="listview" id="list">
                 <li><a href="#booking" data-transition="slide" class="ui-btn"><img src="img/calendar-icon.png" />Book</a></li>
-                <li><a href="#signUp" data-transition="slide" class="ui-btn"><img src="img/Bullet.png" />My Stays</a></li>
+                <li><a href="#" data-transition="slide" class="ui-btn"><img src="img/Bullet.png" class="mt5" />My Stays</a></li>
                 <li><a href="#offers" data-transition="slide" class="ui-btn"><img src="img/offers.png" />Offers</a></li>
                 <li><a href="#news" data-transition="slide" class="ui-btn"><img src="img/news.png" />News</a></li>
                 <li><a href="#about" data-transition="slide" class="ui-btn"><img src="img/about.png" />About</a></li>
@@ -379,7 +369,7 @@
 		   </div><!--/ panel -->
         <div data-role="header">
         	<div class="ui-grid-solo bgTheme">
-            	<div class="menu"><a href="#bookingPanel"><img src="img/menu.png" alt="menu" /></a></div>
+            	<div class="menu"><a href="#bookingPanel"><img src="img/ic_drawer.png" alt="menu" /></a></div>
                 <div class="ribbon"><img src="img/ribbon.png" /></div>
                 <div class="pageName">Make Your Booking</div>
                 <p class="clear"></p>
@@ -410,7 +400,6 @@
                 </div>
             </div><!--/ ui-grid-a -->
             <div class="ui-grid-solo bookGrid">
-            	<!--<div class="bedLeft"><img src="img/minus.png" /></div>-->
                 <div class="widthFull">
                 	<img src="img/icon_multiroom.png" class="mr20" />
                     <span class="bedNumber">1</span><span class="bedRoom">Room</span>
@@ -420,7 +409,6 @@
             <div class="ui-grid-solo bookGrid" id="appendDiv">
             	<div class="roomOccopied">
                 	<div class="roomOccoTop">Room 1 Occopants</div>
-                    <!--<div class="minus1"><img src="img/minus1.png" /></div>-->
                     <div class="ui-grid-a">
                     	<div class="ui-block-a txtCenter p15" style="width:50%;">
                         	<img src="img/icon_code_corporate.png" class="mr10">
@@ -462,9 +450,51 @@
                 </div>
             </div><!--/ ui-grid-solo -->
         </div><!--/ content -->
-        <div class="bookBottom"><a href="#hotels">Please Choose your Hotel</a></div>                      
+        <div class="bookBottom"><a href="#selectHotel">Please Choose your Hotel</a></div>                      
     </div><!--/data-role=page-->
-      
+    
+    <div data-role="page" id="selectHotel" class="pb60">
+        <div data-role="header">
+        	<div class="ui-grid-solo bgTheme">
+            	<div class="menu"><a href="#booking"><img src="img/ic_up.png" alt="Back" /></a></div>
+                <div class="ribbon ml0"><img src="img/ribbon.png" /></div>
+                <div class="pageName fz20">Select your hotel</div>
+                <div class="overflow"><img src="img/ic_overflow.png" /></div>
+                <div class="search"><img src="img/icon_search.png" /></div>
+                <p class="clear"></p>
+            </div>
+        </div><!--/ header -->
+        <div data-role="main" class="ui-content">
+            <div class="ui-grid-solo bbred">
+            	<div class="hotelImage"><img src="img/hotelImage.png" /></div>
+                <div class="hotelDetail">
+                	<div class="hotelName"><h4>Hotel Laval</h4></div>
+                    <div class="hotelPrice"><span class="from">from</span><span class="rate">200.00</span><span class="currency">CAD</span></div>
+                </div>
+                <div class="hotelInfo"><a href="#hotelInfo" data-transition="slide"><img src="img/info.png" /></a></div>
+                <p class="clear"></p>
+            </div>
+        </div><!--/ content -->
+        <div class="bookBottom"><a href="#hotelInfo">Please Choose your Hotel</a></div>                      
+    </div><!--/data-role=page-->
+    
+    <div data-role="page" id="hotelInfo" class="pb60">
+        <div data-role="header">
+        	<div class="ui-grid-solo bgTheme">
+            	<div class="menu"><a href="#selectHotel"><img src="img/ic_up.png" alt="Back" /></a></div>
+                <div class="ribbon ml0"><img src="img/ribbon.png" /></div>
+                <div class="pageName fz20">The Hotel</div>
+                <p class="clear"></p>
+            </div>
+        </div><!--/ header -->
+        <div data-role="main" class="ui-content">
+            <div class="ui-grid-solo">
+            	<div class="hotelImageLarge"><img src="img/exterior.jpg" /></div>
+            </div>
+        </div><!--/ content -->
+        <div class="bookBottom"><a href="#booking">Please Choose your Hotel</a></div>                      
+    </div><!--/data-role=page-->
+     
     <div data-role="page" id="hotels">
         <div data-role="header">
         	<div class="ui-grid-solo bgTheme">
@@ -488,9 +518,6 @@
                 <div class="imgText">Fantastic Kusadasi</div>
             </div><!--/ ui-grid-solo -->
         </div><!--/ content -->
-        <!--<div data-role="footer">
-        	<h1>Insert Footer Text Here</h1>
-        </div>--><!--/ footer -->
     </div><!--/data-role=page-->
     
     <script>
@@ -498,7 +525,7 @@
             
             var jssor_1_options = {
               $AutoPlay: true,
-              $SlideDuration: 800,
+              $SlideDuration: 1000,
               $SlideEasing: $Jease$.$OutQuint,
               $ArrowNavigatorOptions: {
                 $Class: $JssorArrowNavigator$
@@ -533,6 +560,7 @@
     <script>
 	$(document).ready(function(){
 		resizeDiv();
+
 	});
     window.onresize = function(event) {
 		resizeDiv();
@@ -542,11 +570,16 @@
 	vph = $(window).height();
 	$("#height").css({'height': vph + 'px'});
 	$("#height1").css({'height': vph + 'px'});
+	$(".height").css({'height': vph + 'px'});	
+	//alert(vph);
 	}
+	//$('input#codeBtn').on('click', function(e){
+	//alert('code button');
+	//e.preventDefault();
 	
-	$('#codeBtn').click(function(){
-		window.location="#reset"
-;		});
+	//});	
+
+
     </script>
           	<script>
 
@@ -594,7 +627,7 @@
 		bed++;
 		//alert(bed);
 		$('.bedNumber').text(bed);
-		$('#appendDiv').append('<div class="roomOccopied mt15"><div class="roomOccoTop">Room <span class="bedNumb">'+bed+'</span> Occopants</div><div class="minus1"><img src="img/minus1.png" /></div><div class="ui-grid-a"><div class="ui-block-a txtCenter p15" style="width:50%;"><img src="img/icon_code_corporate.png" class="mr10"><span class="numbe">2</span><span class="pers">Adults</span></div><div class="ui-block-b txtCenter p15" style="width:50%"><img src="img/icon_child.png" class="mr10"><span class="numbe">0</span><span class="pers">Children</span></div></div></div>');
+		$('#appendDiv').append('<div class="roomOccopied mt15"><div class="roomOccoTop">Room <span class="bedNumb">'+bed+'</span> Occopants</div><div class="minus1"><img src="img/minus.png" /></div><div class="ui-grid-a"><div class="ui-block-a txtCenter p15" style="width:50%;"><img src="img/icon_code_corporate.png" class="mr10"><span class="numbe">2</span><span class="pers">Adults</span></div><div class="ui-block-b txtCenter p15" style="width:50%"><img src="img/icon_child.png" class="mr10"><span class="numbe">0</span><span class="pers">Children</span></div></div></div>');
 	});
 	// remove div one by one
 		$('#appendDiv').on('click','.minus1',function() {
@@ -608,6 +641,14 @@
 		   var radio = $('input[name=radio-choice-v-2]:checked', '#popForm').val();
 		   $('#bedRat').html(radio); 
 		});	
+		
+		$(document).on('pageinit', '#firstpage', function(){ 
+			window.setTimeout(function(){
+
+			// Move to a new location or you can do something else
+			window.location.href = "#news";
+			}, 9000);
+		});
     
     </script>
     
