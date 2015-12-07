@@ -94,13 +94,14 @@ p.clear{ clear:both; margin-top:0px !important; margin-bottom:0px !important;}
 		.slid_img{position:relative; overflow-y:hidden; width:100%; height:100%;}
 		
 .continue-btn .ui-btn{background-color:#15A869 !important; color:#fff !important; border:none; margin:0; padding:1.3em; font-family:gothic;}
-.roomTop{ background:#464d55; color: #fff !important; font-family:gothic; text-align:center;}
-.room{ display: inline-block; margin-top: 12px; margin-bottom: 12px; border-right: 1px solid #fff; padding-right: 15px;}
-.room img, .persons img{ width: 40px; height: auto;}
-.roomInner{ display: inline-block; margin-left: 15px; font-size: 14px;}
-.persons{ display: inline-block; margin-top: 12px; margin-bottom: 12px; padding-left: 15px;}
-.personsInner{ display: inline-block; margin-left: 15px; font-size: 14px;}
-.imgTextRoom{ position: absolute; bottom: 0px; width: 100%; color: #7a3633; background: rgba(230,221,206,0.7); font-weight: 600; font-size: 18px; font-family: gothic; padding-top: 10px; padding-bottom: 10px;}
+.roomTop{ background:#5F0D0C; color: #fff !important; font-family:gothic; text-align:center;}
+.room{ display: inline-block; margin-top: 7px; margin-bottom: 7px; border-right: 1px solid #fff; padding-right: 15px;}
+.room img{ width: 40px; height: auto; float:left; margin-top:8px;}
+.persons img{ width: 40px; height: auto; float:left; margin-top:3px;}
+.roomInner{ display: inline-block; margin-left: 15px; font-size: 12px;}
+.persons{ display: inline-block; margin-top: 7px; margin-bottom: 7px; padding-left: 15px;}
+.personsInner{ display: inline-block; margin-left: 15px; font-size: 12px;}
+.imgTextRoom{ position: absolute; bottom: 0px; width: 100%; color: #7a3633; background: rgba(230,221,206,0.8); font-weight: 600; font-size: 18px; font-family: gothic; padding-top: 10px; padding-bottom: 10px;}
 .textRoomLeft{ position: relative; float: left; padding-left: 15px;}
 .textRoomLeft span{ font-weight: 100; margin-right: 5px;}
 .textRoomRight{ position: relative; float: right; padding-right: 35px; margin-top: 8px;}
@@ -178,9 +179,20 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 .overflow{ position: relative; float: right; margin-top: 18px; margin-right: 20px;}
 .hotelImage{ position: relative; width: 130px; height: 86px; overflow: hidden; float: left; margin: 10px;}
 .hotelDetail{ position: relative; float: left; margin-top: 26px;}
-.hotelName h4{ font-family: gothic; color: #5f0d0c; margin-bottom: 2px; margin-top: 2px; font-size: 16px;}
-.hotelPrice{color: #5f0d0c;}
+.hotelName h4{ font-family: gothic; color: #9E3634; margin-bottom: 2px; margin-top: 2px; font-size: 16px;}
+.hotelPrice{color: #9E3634;}
 .from{ font-size: 14px; margin-right: 7px;}
 .rate{ font-size: 18px; margin-right: 7px;}
 .currency{font-size: 18px;}
 .hotelInfo{ position: relative; float: right; margin-right: 10px; margin-top: 34px;}
+.infoHname{ margin-left: 15px; margin-right: 15px; text-align: center; font-family: gothic; color: #7A3633;}
+.infoHname h3{ font-weight:100;}
+.mlr15{ margin-left:15px; margin-right:15px;}
+.infoHdetail{ font-size:14px; color:#7A3633;}
+.confirmBtn{position: fixed; bottom: 0px; background: #15A869 none repeat scroll 0% 0%; width: 100%; height: auto; color: #FFF !important; font-family: gothic; text-align: center; font-size: 18px; z-index: 99999;}
+.confirmBtn a{color: #FFF !important; text-decoration: none; font-weight: 100; display: block; padding-top: 15px; padding-bottom: 15px;}
+.confirmBtn a img{ margin-right:5px;}
+.xHide{ overflow-x: hidden !important;}
+#roomAmenities, #amenities{ list-style:none;}
+#roomAmenities li, #amenities li{ margin-bottom:7px;}
+#roomAmenities li span, #amenities li span{font-size: 16px; margin-left: 10px; color: #61676D;}

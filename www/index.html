@@ -180,7 +180,7 @@
     <div data-role="page" id="roomList" class="pb47">
         <div data-role="header">
         	<div class="ui-grid-solo bgTheme">
-            	<div class="menu"><a href="#news"><img src="img/Arrow-Left-icon.png" alt="Left Arrow" /></a></div>
+            	<div class="menu"><a href="#selectHotel" data-transition="slide"><img src="img/Arrow-Left-icon.png" alt="Left Arrow" /></a></div>
                 <div class="ribbon"><img src="img/ribbon.png" /></div>
                 <div class="pageName">Room List</div>
                 <p class="clear"></p>
@@ -189,30 +189,30 @@
         <div data-role="main" class="ui-content">
         	<div class="ui-grid-solo roomTop">
             	<div class="room">
-                	<img src="img/bed.png">
+                	<img src="img/icon_multiroom_room.png">
                     <div class="roomInner">Room<br />1 of 1</div>
                 </div> 
                 <div class="persons">
-                  	<img src="img/people.png">
+                  	<img src="img/icon_multiroom_occupants.png">
                    	<div class="personsInner">2 Adults<br />0 Children</div>
                 </div>
             </div>
         	<div class="ui-grid-solo contentBorder">
-            	<img src="img/antalya.jpg" class="imgResponsive" />
+            	<img src="img/lavalRoom.jpg" class="imgResponsive" />
+                <div class="imgTextRoom">
+                	<div class="textRoomLeft">Suita Tumpiv<br /><span>from</span>459.00</div>
+                    <div class="textRoomRight"><a href="#roomInfo" data-transition="slide"><img src="img/info.png" /></a></div>
+                </div>
+            </div><!--/ ui-grid-solo -->
+        	<div class="ui-grid-solo contentBorder">
+            	<img src="img/lavalRoom1.jpg" class="imgResponsive" />
                 <div class="imgTextRoom">
                 	<div class="textRoomLeft">Suita Tumpiv<br /><span>from</span>459.00</div>
                     <div class="textRoomRight"><img src="img/info.png" /></div>
                 </div>
             </div><!--/ ui-grid-solo -->
         	<div class="ui-grid-solo contentBorder">
-            	<img src="img/cappadocia.jpg" class="imgResponsive" />
-                <div class="imgTextRoom">
-                	<div class="textRoomLeft">Suita Tumpiv<br /><span>from</span>459.00</div>
-                    <div class="textRoomRight"><img src="img/info.png" /></div>
-                </div>
-            </div><!--/ ui-grid-solo -->
-        	<div class="ui-grid-solo contentBorder">
-            	<img src="img/kusadasi.jpg" class="imgResponsive" />
+            	<img src="img/lavalRoom2.jpg" class="imgResponsive" />
                 <div class="imgTextRoom">
                 	<div class="textRoomLeft">Suita Tumpiv<br /><span>from</span>459.00</div>
                     <div class="textRoomRight"><img src="img/info.png" /></div>
@@ -222,6 +222,45 @@
         </div><!--/ content -->
     </div><!--/data-role=page-->
     
+    <div data-role="page" id="roomInfo" class="pb60">
+        <div data-role="header">
+        	<div class="ui-grid-solo bgTheme">
+            	<div class="menu"><a href="#roomList" data-transition="slide"><img src="img/ic_up.png" alt="Back" /></a></div>
+                <div class="ribbon ml0"><img src="img/ribbon.png" /></div>
+                <div class="pageName fz20">SUITA TUMPIV</div>
+                <p class="clear"></p>
+            </div>
+        </div><!--/ header -->
+        <div data-role="main" class="ui-content">
+            <div class="ui-grid-solo">
+            	<div class="hotelImageLarge"><img src="img/lavalRoom.jpg" /></div>
+            </div>
+            <div class="ui-grid-solo bookingHeadBdr infoHname">
+            	<h3>Room Description</h3>
+            </div>
+            <div class="ui-grid-solo mlr15">
+            	<p class="infoHdetail">Generous apartment (38 m<sup>2</sup>) for two adults with two children or three adults. Beautiful balcony with view and small living area. Amenities include: flat-screen TV, Wi-Fi, telephone, Nespresso machine, hairdryer, room safe, bathrobe and much more.</p>
+            </div>
+            <div class="ui-grid-solo bookingHeadBdr infoHname">
+            	<h3>Room Amenities</h3>
+            </div>
+            <div class="ui-grid-solo mlr15">
+            	<ul id="roomAmenities">
+                	<li><a class="amenities"><img src="img/aplus.png" /></a> <span>Bathrobe</span></li>
+                	<li><a class="amenities"><img src="img/aplus.png" /></a> <span>Coffee/Tea maker</span></li>
+                	<li><a class="amenities"><img src="img/aplus.png" /></a> <span>Hairdryer</span></li>
+                	<li><a class="amenities"><img src="img/aplus.png" /></a> <span>Safe</span></li>
+                	<li><a class="amenities"><img src="img/aplus.png" /></a> <span>Telephone</span></li>
+                	<li><a class="amenities"><img src="img/aplus.png" /></a> <span>Wireless internet connection</span></li>
+                	<li><a class="amenities"><img src="img/aplus.png" /></a> <span>Flat-screen TV</span></li>
+               </ul>
+            </div>        
+        </div><!--/ content -->
+        <div class="confirmBtn">
+        	<a><img src="img/icon_affirmative_action.png" />Confirm</a>
+        </div>
+    </div><!--/data-role=page-->
+
     <div data-role="page" id="signUp">
     	  <div data-role="panel" id="signupPanel" data-position="left">
           	<div class="signIn"><img src="img/user.png" /><a href="#signIn" class="signInLink" data-transition="slide">Please Sign In</a></div>
@@ -386,7 +425,7 @@
             		<div class="checkIn">
                     	<div class="checkLabel">Check In Date</div>
                         <div class="ui-input-text ui-corner-all ui-shadow-inset">
-                        	<input type="text" class="txtCenter" value="" id="dpd1" >
+                        	<input type="text" class="txtCenter" value="" id="dpd1" readonly >
                         </div>
                     </div>
                 </div>
@@ -394,7 +433,7 @@
                 	<div class="checkIn">
                     	<div class="checkLabel">Check Out Date</div>
                         <div class="ui-input-text ui-corner-all ui-shadow-inset">
-                        	<input type="text" class="txtCenter" value="" id="dpd2" >
+                        	<input type="text" class="txtCenter" value="" id="dpd2" readonly >
                         </div>
                     </div>
                 </div>
@@ -430,7 +469,7 @@
                     <div data-role="header" data-theme="a" class="bgWhite popBB">
                     <h1 class="popH1">Rates</h1>
                     </div>
-                    <div role="main" class="ui-content">
+                    <div role="main" class="ui-content xHide">
                         <form class="popForm" id="popForm">
                             <fieldset data-role="controlgroup" class="mbtZero">
                                 <input type="radio" name="radio-choice-v-2" id="radio-choice-v-2a" value="Bed and Breakfast" checked="checked">
@@ -450,13 +489,13 @@
                 </div>
             </div><!--/ ui-grid-solo -->
         </div><!--/ content -->
-        <div class="bookBottom"><a href="#selectHotel">Please Choose your Hotel</a></div>                      
+        <div class="bookBottom"><a href="#selectHotel" data-transition="slide">Please Choose your Hotel</a></div>                      
     </div><!--/data-role=page-->
     
     <div data-role="page" id="selectHotel" class="pb60">
         <div data-role="header">
         	<div class="ui-grid-solo bgTheme">
-            	<div class="menu"><a href="#booking"><img src="img/ic_up.png" alt="Back" /></a></div>
+            	<div class="menu"><a href="#booking" data-transition="slide"><img src="img/ic_up.png" alt="Back" /></a></div>
                 <div class="ribbon ml0"><img src="img/ribbon.png" /></div>
                 <div class="pageName fz20">Select your hotel</div>
                 <div class="overflow"><img src="img/ic_overflow.png" /></div>
@@ -475,13 +514,13 @@
                 <p class="clear"></p>
             </div>
         </div><!--/ content -->
-        <div class="bookBottom"><a href="#hotelInfo">Please Choose your Hotel</a></div>                      
+        <div class="bookBottom"><a href="#hotelInfo" data-transition="slide">Please Choose your Hotel</a></div>                      
     </div><!--/data-role=page-->
     
     <div data-role="page" id="hotelInfo" class="pb60">
         <div data-role="header">
         	<div class="ui-grid-solo bgTheme">
-            	<div class="menu"><a href="#selectHotel"><img src="img/ic_up.png" alt="Back" /></a></div>
+            	<div class="menu"><a href="#selectHotel" data-transition="slide"><img src="img/ic_up.png" alt="Back" /></a></div>
                 <div class="ribbon ml0"><img src="img/ribbon.png" /></div>
                 <div class="pageName fz20">The Hotel</div>
                 <p class="clear"></p>
@@ -491,8 +530,30 @@
             <div class="ui-grid-solo">
             	<div class="hotelImageLarge"><img src="img/exterior.jpg" /></div>
             </div>
+            <div class="ui-grid-solo bookingHeadBdr infoHname">
+            	<h3>Hotel Laval</h3>
+            </div>
+            <div class="ui-grid-solo mlr15">
+            	<p class="infoHdetail">The La Val Hotel is lovated 1300 metres above sea level on the sunny plateau of Breil/Brigels. It offers spacious rooms with south-facing balconies, an award-winning 500 m<sup>2</sup> spa area, and free parking. The spa area offers a relaxation oasis, massages, kosmetics treatments, saunas, steam baths and a heated wellness pool. All rooms in the Hotel La Val Bergspa Brigels feature a bathroom, a flat-screen TV and a safe. Some a Nespresso coffee machine. Swiss, international and Mediterranean cuisine is served in the the Bistro and in the restaurent. There is also a separate Smokers Lounge and a walk-in wine closet. Old wooden ski and sleds add to the Alpine charm of the hotel. The La Val hotel is the ideal base for trips over the Lukmanierpass to Ticino or over the Oberalp pass to Central Switzerland. The Burleun ski lift is 1 km away. Hiking, Nordic walking, cycling, mini golf, tennis, climbing, golf and river rafting are popular activities in the region. Winter activities include skiing, snowboarding, sledding, ice skating and snow-shoeing. Guests receive a 20% discount on the local golf course's green fees.</p>
+            </div>
+            <div class="ui-grid-solo bookingHeadBdr infoHname">
+            	<h3>Hotel Amenities</h3>
+            </div>
+            <div class="ui-grid-solo mlr15">
+            	<ul id="amenities">
+                	<li><a class="amenities"><img src="img/aplus.png" /></a> <span>Bathrobe</span></li>
+                	<li><a class="amenities"><img src="img/aplus.png" /></a> <span>Coffee/Tea maker</span></li>
+                	<li><a class="amenities"><img src="img/aplus.png" /></a> <span>Hairdryer</span></li>
+                	<li><a class="amenities"><img src="img/aplus.png" /></a> <span>Safe</span></li>
+                	<li><a class="amenities"><img src="img/aplus.png" /></a> <span>Telephone</span></li>
+                	<li><a class="amenities"><img src="img/aplus.png" /></a> <span>Wireless internet connection</span></li>
+                	<li><a class="amenities"><img src="img/aplus.png" /></a> <span>Flat-screen TV</span></li>
+               </ul>
+            </div>        
         </div><!--/ content -->
-        <div class="bookBottom"><a href="#booking">Please Choose your Hotel</a></div>                      
+        <div class="confirmBtn">
+        	<a href="#roomList" data-transition="slide"><img src="img/icon_affirmative_action.png" />Confirm</a>
+        </div>
     </div><!--/data-role=page-->
      
     <div data-role="page" id="hotels">
@@ -571,13 +632,7 @@
 	$("#height").css({'height': vph + 'px'});
 	$("#height1").css({'height': vph + 'px'});
 	$(".height").css({'height': vph + 'px'});	
-	//alert(vph);
 	}
-	//$('input#codeBtn').on('click', function(e){
-	//alert('code button');
-	//e.preventDefault();
-	
-	//});	
 
 
     </script>
