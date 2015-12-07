@@ -24,7 +24,7 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 .clear{ clear:both;}
 p.clear{ clear:both; margin-top:0px !important; margin-bottom:0px !important;}
 .imgResponsive{ width:100%; height:auto;}
-.imgText{ position: absolute; bottom: 0px; width: 100%; color: #7A3633; font-size: 18px; padding-left: 15px; padding-top: 15px; padding-bottom: 15px; background: rgba(230, 221, 206, 0.9) none repeat scroll 0% 0%; font-weight: 100;}
+.imgText{ position: absolute; bottom: 0px; width: 100%; color: #7A3633; font-size: 18px; padding-left: 15px; padding-top: 15px; padding-bottom: 15px; background: rgba(230, 221, 206, 0.8) none repeat scroll 0% 0%; font-weight: 100;}
 .ui-content{ padding:0;}
 .mainPad{padding-left:15px !important; padding-right:15px !important;}
 .contentBorder{ position: relative; border-bottom: 2px solid #7a3633;}
