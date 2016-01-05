@@ -7,6 +7,19 @@
 *{	text-shadow: 0 /*{b-bar-shadow-x}*/ 0px /*{b-bar-shadow-y}*/ 0 /*{b-bar-shadow-radius}*/ 	#111 /*{b-bar-shadow-color}*/;
 	box-shadow: inset 0 0px 0px /*{global-box-shadow-size} rgba(0,0,0,.2) /*{global-box-shadow-color}*/;
     outline: -webkit-focus-ring-color auto 0px;}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 10px 0;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 20px;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
 textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
     border-color: rgba(82, 168, 236, 0.8);
     outline: 0;
@@ -17,10 +30,11 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 }
 
 
-.menu{position: relative; width: 23px; height: 32px; padding-top: 18px; padding-bottom: 18px; float: left;}
+.menu{ position: relative; width: 23px; height: 32px; padding-top: 12px; padding-bottom: 4px; float: left;}
 .bgTheme{ background-color:#e6ddce !important;}
-.ribbon{position: relative; margin: 21px 7px 0px; float: left;}
-.pageName{position: relative; color: #7A3633; float: left; font-size: 23px; margin-top: 23px; margin-left: 2px; font-weight: 100;}
+.ribbon{position: relative; margin: 13px 7px 0px 0px; float: left;}
+.ribbon1{position: relative; margin: 21px 7px 0px 0px; float: left;}
+.pageName{position: relative; color: #7A3633; float: left; font-size: 22px; margin-top: 14px; margin-left: 2px; font-weight: 100;}
 .clear{ clear:both;}
 p.clear{ clear:both; margin-top:0px !important; margin-bottom:0px !important;}
 .imgResponsive{ width:100%; height:auto;}
@@ -31,70 +45,13 @@ p.clear{ clear:both; margin-top:0px !important; margin-bottom:0px !important;}
 .signIn{ position:relative; padding:16px;}
 .signIn img{ width: 65px; border-radius: 50%;}
 .signInLink{ position: absolute; top: 42px; left: 95px; font-family:gothic; text-decoration:none; color:#7a3633 !important;font-weight: 100 !important;font-size: 16px;}
-.gen{ border-bottom: 2px solid #d2d2d2; padding-bottom: 7px; padding-left:3px}
+.gen{ border-bottom: 2px solid #d2d2d2; padding-bottom: 7px; padding-left:3px; color:#7a3633 !important;}
 .ui-page-theme-a .ui-btn{ font-family:gothic; font-weight:100;}
 .ui-listview > .ui-li-has-thumb > .ui-btn{ min-height:auto; padding-left:5.26em; padding-top:25px; padding-bottom:25px;}
 .ui-listview > .ui-li-has-thumb img{ top: 16px !important; left: 16px !important;}
 
-        /* jssor slider bullet navigator skin 05 css */
-        /*
-        .jssorb05 div           (normal)
-        .jssorb05 div:hover     (normal mouseover)
-        .jssorb05 .av           (active)
-        .jssorb05 .av:hover     (active mouseover)
-        .jssorb05 .dn           (mousedown)
-        */
-		body{ margin:0;}
-		#firstpage{background-color:#FDF3E2;}
-		#jssor_1{height:100%;
-		}
-        .jssorb05 {
-            position: absolute;
-        }
-        .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
-            position: absolute;
-            /* size of bullet elment */
-            width: 16px;
-            height: 16px;
-            background: url(../img/slider/b05.png) no-repeat;
-            overflow: hidden;
-            cursor: pointer;
-        }
-        .jssorb05 div { background-position: -7px -7px; }
-        .jssorb05 div:hover, .jssorb05 .av:hover { background-position: -37px -7px; }
-        .jssorb05 .av { background-position: -67px -7px; }
-        .jssorb05 .dn, .jssorb05 .dn:hover { background-position: -97px -7px; }
-
-        /* jssor slider arrow navigator skin 22 css */
-        /*
-        .jssora22l                  (normal)
-        .jssora22r                  (normal)
-        .jssora22l:hover            (normal mouseover)
-        .jssora22r:hover            (normal mouseover)
-        .jssora22l.jssora22ldn      (mousedown)
-        .jssora22r.jssora22rdn      (mousedown)
-        */
-        .jssora22l, .jssora22r {
-            display: block;
-            position: absolute;
-            /* size of arrow element */
-            width: 40px;
-            height: 58px;
-            cursor: pointer;
-            background: url(../img/slider/a22.png) center center no-repeat;
-            overflow: hidden;
-        }
-        .jssora22l { background-position: -10px -31px; }
-        .jssora22r { background-position: -70px -31px; }
-        .jssora22l:hover { background-position: -130px -31px; }
-        .jssora22r:hover { background-position: -190px -31px; }
-        .jssora22l.jssora22ldn { background-position: -250px -31px; }
-        .jssora22r.jssora22rdn { background-position: -310px -31px; }
-		.slid_text { position: absolute; z-index: 999; text-align: left; bottom: 50px; color: #fffdfb; background-color: #fdf3e2; padding: 25px 20px 36px 20px; font-size:22px; line-height:22px;text-shadow: 0px 0px 0px !important;}
-		.slid_img{position:relative; overflow-y:hidden; width:100%; height:100%;}
-		
-.continue-btn .ui-btn{background-color:#15A869 !important; color:#fff !important; border:none; margin:0; padding:1.3em; font-family:gothic;}
-.roomTop{ background:#5F0D0C; color: #fff !important; font-family:gothic; text-align:center;}
+.continue-btn .ui-btn{background-color:#15A869 !important; color:#fff !important; border:none; margin:0; padding:1em; font-family:gothic;}
+.roomTop{ background:#5F0D0C; color: #fff !important; font-family:gothic; text-align:center; height:54px !important;}
 .room{ display: inline-block; margin-top: 7px; margin-bottom: 7px; border-right: 1px solid #fff; padding-right: 15px;}
 .room img{ width: 40px; height: auto; float:left; margin-top:8px;}
 .persons img{ width: 40px; height: auto; float:left; margin-top:3px;}
@@ -102,15 +59,22 @@ p.clear{ clear:both; margin-top:0px !important; margin-bottom:0px !important;}
 .persons{ display: inline-block; margin-top: 7px; margin-bottom: 7px; padding-left: 15px;}
 .personsInner{ display: inline-block; margin-left: 15px; font-size: 12px;}
 .imgTextRoom{ position: absolute; bottom: 0px; width: 100%; color: #7a3633; background: rgba(230,221,206,0.8); font-weight: 600; font-size: 18px; font-family: gothic; padding-top: 10px; padding-bottom: 10px;}
-.textRoomLeft{ position: relative; float: left; padding-left: 15px;}
+.textRoomLeft{ position: relative; float: left; padding-left: 15px; color:#7A3633;}
 .textRoomLeft span{ font-weight: 100; margin-right: 5px;}
 .textRoomRight{ position: relative; float: right; padding-right: 35px; margin-top: 8px;}
-.roomBottom{ position:fixed; bottom:0px; background:#898989; width:100%; height:auto; color:#fff !important; font-family:gothic;text-align: center; padding-top: 12px; padding-bottom: 12px; font-size: 18px;}
+.roomBottom{ position:fixed; bottom:0px; background:#898989; width:100%; height:auto; color:#fff !important; font-family:gothic;text-align: center; padding-top: 15px; padding-bottom: 15px; font-size: 18px;}
+@media(max-width: 359px){
+	.roomBottom{ font-size: 16px;}
+}
 .bookBottom{position: fixed; bottom: 0px; background: #898989; width: 100%; height: auto; color: #fff !important; font-family: gothic; text-align: center; font-size: 18px; z-index:99999;}
 .bookBottom a { color: #fff !important; text-decoration: none; font-weight: 100; display: block; padding-top: 15px; padding-bottom: 15px;}
 .bookBottom a:hover{ color:#fff !important;}
+.greenBtn{position: fixed; bottom: 0px; background: #15A869; width: 100%; height: auto; color: #fff !important; font-family: gothic; text-align: center; font-size: 18px; z-index:99999;}
+.greenBtn a { color: #fff !important; text-decoration: none; font-weight: 100; display: block; padding-top: 11px; padding-bottom: 11px;}
+.greenBtn a:hover{ color:#fff !important;}
 .pb47{ padding-bottom:47px;}
 .bgImg{ background:url(../img/bg_login_page.png) no-repeat fixed; background-size:100%;}
+.bgImg1{ background:url(../img/profileImg.jpg) no-repeat fixed 50% -50%; position:absolute; width:100%; height:200px;-webkit-filter: blur(5px);-moz-filter: blur(5px); -o-filter: blur(5px); -ms-filter: blur(5px); filter: blur(15px); background-size:100%;}
 .inner{ margin:20px 30px 47px 30px; background: rgba(0,0,0,0.6); padding:15px; border-radius:10px;}
 .menu-white{ position: absolute; z-index:999;}
 .logo-sign{position: relative; text-align: center; margin-bottom: 15px;}
@@ -134,11 +98,15 @@ p.clear{ clear:both; margin-top:0px !important; margin-bottom:0px !important;}
 .p15{ padding:15px;}
 .checkIn{ border: 2px solid #a6a6a6; border-radius: 5px;}
 .checkLabel{ padding: 10px; text-align: center; background: #ebebeb; color: #7a3633; font-family: gothic; font-size: 14px; border-radius: 5px 5px 0 0;}
+@media (max-width: 359px){
+	.checkLabel{ padding: 10px 6px; }
+}
 .txtCenter{ text-align:center !important;}
 input[type="text"]{ background-color: #ffffff; border: 0px solid #cccccc; -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075); -moz-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075); box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075); margin-bottom: 0px;}
 #dpd1, #dpd2{ color: #7a3633; font-size: 18px;}
 .borderBottom{ border-bottom: 1px solid #a6a6a6;}
 .bbred{ border-bottom: 2px solid #5f0d0c;}
+.bbgrey{ border-bottom:1px solid #c8c7cc;}
 .pb15{ padding-bottom: 15px;}
 .bookGrid{ position: relative;  padding-top: 15px; padding-bottom: 15px; border-bottom: 1px solid #a6a6a6;}
 .bookGrid2{ position: relative;  padding-top: 15px; padding-bottom: 15px; border-bottom: 1px solid #a6a6a6; border-top:1px solid #a6a6a6; margin-top:15px;}
@@ -155,10 +123,20 @@ input[type="text"]{ background-color: #ffffff; border: 0px solid #cccccc; -webki
 .roomOccoTop{text-align: center;color: #5f0d0c; font-size: 18px; background: #ebebeb; padding: 10px; border-radius: 5px 5px 0 0;}
 .numbe{ margin-right: 10px; color: #5f0d0c; font-size: 14px; font-family: gothic; top: 6px; position: relative;}
 .pers{color: #5f0d0c; font-size: 14px; font-family: gothic; top: 6px; position: relative;}
+.pers1{color: #5f0d0c; font-size: 14px; font-family: gothic; top: 6px; position: relative;}
+.bookPad{ padding:15px;}
+@media(max-width: 359px){
+	.pers{ margin-right:16px;}
+	.bookPad{ padding:10px 7px; }	
+}
 .minus1{ position: absolute; right: 10px; top: 9px;}
 .mt15{ margin-top:15px;}
 .mt5{ margin-top:5px;}
 .ml0{ margin-left:0px !important;}
+.mb3{ margin-bottom:3px !important;}
+.pt15{ padding-top:15px;}
+.pt8{ padding-top:8px;}
+.pt5b10{ padding-bottom:10px; padding-top:5px;}
 .bedRating{ color: #a3a3a3; font-family: gothic; font-size: 15px;}
 .bgWhite{ background:#fff !important;}
 .popH1{color: #5f0d0c; padding-bottom: 0px !important; padding-top: 0px !important; font-family: gothic; font-size: 20px !important; margin: 0px 0px 0px 15px !important; text-align: left !important; font-weight:100 !important;}
@@ -174,9 +152,9 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 #list li{ height:72px; overflow-y: hidden; border-bottom: 1px solid #d2d2d2;}
 .ui-listview > li > a.ui-btn{border-width: 0px 0px 0px; border-style: solid;}
 .ui-listview > li.ui-last-child > a.ui-btn { border-bottom-width: 0px;}
-.fz20{ font-size:20px;}
-.search{ position: relative; float: right; margin-top: 18px; margin-right: 20px;}
-.overflow{ position: relative; float: right; margin-top: 18px; margin-right: 20px;}
+.fz20{ font-size:18px;}
+.search{ position: relative; float: right; margin-top: 10px; margin-right: 20px;}
+.overflow{ position: relative; float: right; margin-top: 10px; margin-right: 20px;}
 .hotelImage{ position: relative; width: 130px; height: 86px; overflow: hidden; float: left; margin: 10px;}
 .hotelDetail{ position: relative; float: left; margin-top: 26px;}
 .hotelName h4{ font-family: gothic; color: #9E3634; margin-bottom: 2px; margin-top: 2px; font-size: 16px;}
@@ -185,14 +163,113 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 .rate{ font-size: 18px; margin-right: 7px;}
 .currency{font-size: 18px;}
 .hotelInfo{ position: relative; float: right; margin-right: 10px; margin-top: 34px;}
+@media (max-width: 359px){
+	.hotelImage{ width: 120px; height: 79px; }
+	.hotelName h4{ font-size: 15px;}
+	.rate{ font-size: 16px; }
+	.currency{font-size: 16px;}
+}
 .infoHname{ margin-left: 15px; margin-right: 15px; text-align: center; font-family: gothic; color: #7A3633;}
 .infoHname h3{ font-weight:100;}
 .mlr15{ margin-left:15px; margin-right:15px;}
+.mr5{ margin-right:5px;}
 .infoHdetail{ font-size:14px; color:#7A3633;}
 .confirmBtn{position: fixed; bottom: 0px; background: #15A869 none repeat scroll 0% 0%; width: 100%; height: auto; color: #FFF !important; font-family: gothic; text-align: center; font-size: 18px; z-index: 99999;}
-.confirmBtn a{color: #FFF !important; text-decoration: none; font-weight: 100; display: block; padding-top: 15px; padding-bottom: 15px;}
+.confirmBtn a{color: #FFF !important; text-decoration: none; font-weight: 100; display: block; padding-top: 11px; padding-bottom: 11px;}
 .confirmBtn a img{ margin-right:5px;}
 .xHide{ overflow-x: hidden !important;}
 #roomAmenities, #amenities{ list-style:none;}
 #roomAmenities li, #amenities li{ margin-bottom:7px;}
 #roomAmenities li span, #amenities li span{font-size: 16px; margin-left: 10px; color: #61676D;}
+.bgblack{background: rgba(0, 0, 0, 0.6) none repeat scroll 0% 0% !important;}
+.ProfileImage{position: relative;width: 98px;height: 96px;border: 4px solid rgb(210, 210, 210);border-radius: 100px;margin: 48px auto 10px;}
+.ProfileImage img{ border-radius:96px;}
+.editProImg{position: relative; width: 98px; height: 96px; border: 4px solid rgb(210, 210, 210); border-radius: 100px; margin: 30px auto 30px;}
+.editProImg img{ border-radius:96px;}h4.personName{color: rgb(255, 255, 255);font-weight: 100;font-family: gothic;text-align: center;font-size: 18px;margin-top:12px;margin-bottom:24px;}
+h3.pDetails{color: rgb(122, 54, 51);font-family: gothic;font-weight: 100;font-size: 22px;text-align: center;margin: 15px 15px 0px;border-bottom: 2px solid rgb(200, 199, 204);padding-bottom: 8px; line-height:29px;}
+h4.proDetHeading{ color: rgb(122, 54, 51); font-family: gothic; text-align: center; letter-spacing: 0.8px; font-size:15px; margin-bottom:3px;}
+p.proDetInfo{ color: rgb(200, 199, 204); text-align: center; letter-spacing: 0.5px; font-size:15px; margin-bottom:3px;}
+.txtUpper{ text-transform:uppercase !important;}
+.bdrTB{ border-bottom: 1px solid #C8C7CC; border-top: 1px solid #C8C7CC;}
+.pRel{ position:relative;}
+.myStays{ position:relative; margin:0px 15px; border-bottom:1px solid #c8c7cc; padding:5px 0px 10px 0px;}
+.stayDate{ position: absolute; width: 35px; font-size: 18px; text-align: center; text-transform: capitalize;color: rgb(122, 54, 51); margin-top: 5px;}
+.stayDetail{ position: relative; padding-left: 42px;}
+.sdTop{ position: relative; color: rgb(122, 54, 51); text-transform: uppercase; padding-top: 6px; font-size: 14px;}
+.sdBottom{ position: relative; color: rgb(200, 199, 204); font-size: 15px; letter-spacing: 0.7px;}
+.stayInfo{ position: absolute; right: 0px; top: 20px;}
+a.allReserve{ color: #7A3633 !important; border-bottom: 1px solid #c8c7cc; display: block; margin: 0px 15px; padding: 7px 0px; font-weight: normal; font-family:gothic;}
+a.allReserve:hover{ color: #7A3633; text-decoration:none;}
+.editProRow{margin: -22px 15px 10px; border-width: 1px; border-color: rgb(200, 199, 204);}
+.editProHeading{position: relative; width: 188px; height: 40px; background-color: rgb(255, 255, 255); margin: auto;text-align: center;}
+.editProHeading h3{color: #7A3633; font-family: gothic; font-weight: 100; font-size: 22px;}
+.editName{ background: url(../img/icon_name_mystays.png) no-repeat 7px !important; padding-left: 40px !important; padding-top: 12px !important; padding-bottom: 12px !important; border: 2px solid #C8C7CC !important; color:#7A3633 !important;}
+.editNumber{ background: url(../img/icon_phone_my_stays.png) no-repeat 7px !important; padding-left: 40px !important; padding-top: 12px !important; padding-bottom: 12px !important; border: 2px solid #C8C7CC !important; color:#7A3633 !important;}
+.editEmail{ background: url(../img/icon_email_my_stays.png) no-repeat 7px !important; padding-left: 40px !important; padding-top: 12px !important; padding-bottom: 12px !important; border: 2px solid #C8C7CC !important; color:#7A3633 !important;}
+.editAddress{ background: url(../img/address_icon1.png) no-repeat 7px !important; padding-left: 40px !important; padding-top: 12px !important; padding-bottom: 12px !important; border: 2px solid #C8C7CC !important; color:#7A3633 !important;}
+.editCity{ background: url(../img/city_icon1.png) no-repeat 7px !important; padding-left: 40px !important; padding-top: 12px !important; padding-bottom: 12px !important; border: 2px solid #C8C7CC !important; color:#7A3633 !important;}
+.ui-shadow-inset {box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2) inset;}
+.ui-overlay-b, .ui-page-theme-b, .ui-page-theme-b .ui-panel-wrapper { background-color: #fff; border-color: #fff; color: #c8c7cc; text-shadow: 0px 0px 0px #111;}
+.ui-page-theme-b .ui-btn:focus, html .ui-bar-b .ui-btn:focus, html .ui-body-b .ui-btn:focus, html body .ui-group-theme-b .ui-btn:focus, html head + body .ui-btn.ui-btn-b:focus, .ui-page-theme-b .ui-focus, html .ui-bar-b .ui-focus, html .ui-body-b .ui-focus, html body .ui-group-theme-b .ui-focus, html head + body .ui-btn-b.ui-focus, html head + body .ui-body-b.ui-focus {
+    box-shadow: 0px 0px 0px #2AD;
+}
+.ui-page-theme-b .ui-btn.ui-btn-active, html .ui-bar-b .ui-btn.ui-btn-active, html .ui-body-b .ui-btn.ui-btn-active, html body .ui-group-theme-b .ui-btn.ui-btn-active, html head + body .ui-btn.ui-btn-b.ui-btn-active, .ui-page-theme-b .ui-checkbox-on::after, html .ui-bar-b .ui-checkbox-on::after, html .ui-body-b .ui-checkbox-on::after, html body .ui-group-theme-b .ui-checkbox-on::after, .ui-btn.ui-checkbox-on.ui-btn-b::after, .ui-page-theme-b .ui-flipswitch-active, html .ui-bar-b .ui-flipswitch-active, html .ui-body-b .ui-flipswitch-active, html body .ui-group-theme-b .ui-flipswitch-active, html body .ui-flipswitch.ui-bar-b.ui-flipswitch-active, .ui-page-theme-b .ui-slider-track .ui-btn-active, html .ui-bar-b .ui-slider-track .ui-btn-active, html .ui-body-b .ui-slider-track .ui-btn-active, html body .ui-group-theme-b .ui-slider-track .ui-btn-active, html body div.ui-slider-track.ui-body-b .ui-btn-active {
+    text-shadow: 0px 0px 0px rgb(0, 136, 187);
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(122, 54, 51);
+    color: rgb(122, 54, 51);
+    border-left: 0px none;
+    border-right: 0px none;
+}
+.ui-page-theme-b .ui-btn, html .ui-bar-b .ui-btn, html .ui-body-b .ui-btn, html body .ui-group-theme-b .ui-btn, html head + body .ui-btn.ui-btn-b, .ui-page-theme-b .ui-btn:visited, html .ui-bar-b .ui-btn:visited, html .ui-body-b .ui-btn:visited, html body .ui-group-theme-b .ui-btn:visited, html head + body .ui-btn.ui-btn-b:visited {
+    background-color: #fff;
+    border-color: #b9b9b9;
+    color: #b9b9b9;
+    text-shadow: 0px 0px 0px #111;
+    border-left: 0px;
+    border-right: 0px;
+}
+.ui-page-theme-b .ui-btn{ margin:0px 2px !important;}
+.ui-tabs {
+    position: relative;
+    padding: 0.2em 0em;
+}
+.myStaysDetail{ position:relative; border-bottom:1px solid #c8c7cc; padding:5px 0px 10px 0px;}
+.mysdt{ position: relative; color: rgb(122, 54, 51); font-size: 14px; font-family:gothic;}
+.mysdm{ position: relative; color: rgb(122, 54, 51); font-size: 14px; text-transform:uppercase; font-family:gothic;}
+.mysdb{ position: relative; color: rgb(122, 54, 51); font-size: 14px;}
+.sdmargin{ margin:6px 0px; }
+.myStayDate{ position: absolute; width: 46px; font-size: 18px; text-align: center; text-transform: capitalize;color: rgb(122, 54, 51); margin-top: 5px;}
+.myStayDetail{ position: relative; padding-left: 52px;}
+.ptb12{ padding:12px 0px;}
+.ui-body-b, .ui-page-theme-b .ui-body-inherit, html .ui-bar-b .ui-body-inherit, html .ui-body-b .ui-body-inherit, html body .ui-group-theme-b .ui-body-inherit, html .ui-panel-page-container-b { background-color: #fff; border-color: #fff; color: #FFF; text-shadow: 0px 0px 0px #111;}
+.ui-page-theme-b .ui-btn, html .ui-bar-b .ui-btn, html .ui-body-b .ui-btn, html body .ui-group-theme-b .ui-btn, html head + body .ui-btn.ui-btn-b, .ui-page-theme-b .ui-btn:visited, html .ui-bar-b .ui-btn:visited, html .ui-body-b .ui-btn:visited, html body .ui-group-theme-b .ui-btn:visited, html head + body .ui-btn.ui-btn-b:visited { color: #7A3633; text-shadow: 0px 0px 0px #111;}
+.confirmReserve{background-color: rgb(211, 233, 146); text-align: center; color: rgb(141, 182, 53);}
+.m0{ margin:0px;}
+.nsHotelInfo{ text-align: center; border-bottom: 2px solid rgb(200, 199, 204); margin: 0px 15px;}
+.nsHotelName{ color: rgb(122, 54, 51); font-weight: 100; font-family: gothic; font-size: 18px;}
+.nsResNumb{ color: rgb(200, 199, 204); text-transform: uppercase; font-size: 16px;}
+.nsResInfo{ margin: 15px 15px 30px 15px; border-bottom:1px solid #c8c7cc; text-align:center;}
+.nsRoomPrice{ color: #7A3633; font-weight: 100; font-size: 18px;}
+.nsMap{ margin: 0px 15px; border-top: 1px solid rgb(200, 199, 204); border-bottom: 1px solid rgb(200, 199, 204); padding-top: 5px; padding-bottom: 5px;}
+.nsOpt{ margin:0px 15px; border-bottom:1px solid #c8c7cc; text-align:center;}
+.nsOpt h3{ margin: 3px 0px; font-size: 22px; font-weight: 100; font-family: gothic; color:#7A3633;}
+.nsOptions{ margin: 0px 15px 10px; border-bottom: 1px solid rgb(200, 199, 204); padding: 8px 0px;}
+.nsAddRes { background: transparent url("../img/icon_add_to_calendar.png") no-repeat scroll 12px 5px; padding: 0px 7px 0px 52px; color: rgb(122, 54, 51); width: 54%; float: left;}
+@media(min-width:361px){
+	.nsAddRes { padding: 9px 7px 0px 52px; }
+}
+.nsAddBtn{ float: right; width: 25%; text-align: center; margin-top: 11px;}
+.addBtn{ padding: 7px 14px; border-radius: 5px; color: rgb(255, 255, 255) !important; background: rgb(253, 243, 226) none repeat scroll 0% 0%; border-bottom: 4px solid rgb(252, 235, 207);}
+.ptb15{ padding-bottom:15px !important; padding-top:15px !important;}
+.srHeight{ height:54px;}
+.ratesInfo{ margin: 15px 15px 0px 15px; border-top: 1px solid rgb(200, 199, 204); }
+.ratesHeading{ color: rgb(122, 54, 51); font-family: gothic; font-weight: 100; text-align: center;}
+.ratesDetail{ border-top:1px solid #c8c7cc;}
+.ratesTop{ background: rgb(230, 221, 206); float: left; width: 100%;}
+.ratesPlus{ position: relative; float: left; margin-left: 15px; margin-top: 5px;}
+.ratesStandard{ position: relative; color: rgb(122, 54, 51); float: left; margin-left: 10px; padding-top: 7px;padding-bottom: 7px; font-size: 16px;}
+.ratesValue{ position: relative; float: right; color: #7A3633; margin-right: 15px; padding-top: 7px; padding-bottom: 7px;}
+.ratesPrice{font-size: 16px;}
+.ratesCurrency{ text-transform: uppercase; margin-left: 2px; font-family: gothic;}
+.ratesBottom{ position: relative; clear: both; background: rgb(252, 243, 226); text-align: center; color: rgb(122, 54, 51); text-transform: capitalize; padding-top: 4px; padding-bottom: 24px;}

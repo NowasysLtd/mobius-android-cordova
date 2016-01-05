@@ -1,73 +1,104 @@
 <!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
 <html>
-<head>
-	<meta charset="utf-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="msapplication-tap-highlight" content="no">
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-	<title>Mobius</title>
-	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />
-    <link rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="css/datepicker.css">    
-    <link rel="stylesheet" href="css/customStyles.css" />    
-    <script src="js/jquery-2.1.4.min.js"></script>
-	<script src="js/jquery.mobile-1.4.5.min.js"></script>
-    <script src="js/jssor.slider.mini.js"></script>
-    <script src="js/bootstrap-datepicker.js"></script>	
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+		<title>Mobius</title>
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/datepicker.css">
+		<link rel="stylesheet" href="css/customStyles.css" />
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+		<script src="js/bootstrap-slider.js"></script>
+		<script src="js/bootstrap-datepicker.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+	<script>
+    function initialize() {
+      var mapProp = {
+        center:new google.maps.LatLng(51.508742,-0.120850),
+        zoom:5,
+        mapTypeId:google.maps.MapTypeId.ROADMAP
+      };
+      var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+	var idValue = 0;
+	function getNextValue(){
+		return idValue = idValue + 1;
+	}
+    </script>
+
 </head>
 <body>
 	<section id="firstpage" data-role="page">
-    
-    <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 480px; height: 750px; overflow: hidden;">
-        <!-- Loading Screen -->
-        <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
-            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
-            <div style="position:absolute;display:block;background:url(img/slider/loading.gif) no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
-        </div>
-        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 480px; height: 800px; overflow: hidden;">
-            <div data-p="225.00" style="display: none;">
-                <div class="slid_img"><img data-u="image" src="img/slider/slide1.png" /></div>
-                <div class="slid_text">Relax in our wellness area Lindtner Medical Spa & Beauty or discover our partner golf courses.</div>
-            </div>
-            
-            <div data-p="225.00" style="display: none;">
-                <div class="slid_img"><img data-u="image" src="img/slider/slide2.png" /></div>
-                <div class="slid_text">Diversified events in and around Hamburg, complete your residence in the beautiful city.</div>
-            </div>
-            
-            <div data-p="225.00" style="display: none;">
-                <div class="slid_img"><img data-u="image" src="img/slider/slide3.png" /></div>
-                <div class="slid_text">Our sincere staff create outstanding hospitality and deliver personal well-being.</div>
-            </div>
-        </div>
-        <!-- Bullet Navigator -->
-        <div data-u="navigator" class="jssorb05" style="bottom:16px;right:6px;" data-autocenter="1">
-            <!-- bullet navigator item prototype -->
-            <div data-u="prototype" style="width:16px;height:16px;"></div>
-        </div>
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
         
-        <!-- Arrow Navigator 
-        <span data-u="arrowleft" class="jssora22l" style="top:123px;left:12px;width:40px;height:58px;" data-autocenter="2"></span>
-        <span data-u="arrowright" class="jssora22r" style="top:123px;right:12px;width:40px;height:58px;" data-autocenter="2"></span>
-        <a href="http://www.jssor.com" style="display:none">Jssor Slider</a> 
-        -->
-    </div>
-
-    <!-- #endregion Jssor Slider End -->
-    <div class="continue-btn"><a href="#news" class="ui-btn" data-transition="slide">Continue</a></div>
-    
-
-    
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <img src="img/slider/slide1.png" alt="Chania" class="img-responsive">
+                <div class="carousel-caption">
+                    <p>Relax in our wellness area Lindtner Medical Spa & Beauty or discover our partner golf courses.
+</p>
+                </div>
+              </div>
+        
+              <div class="item">
+                <img src="img/slider/slide2.png" alt="Chania" class="img-responsive">
+                <div class="carousel-caption">
+                    <p>Diversified events in and around Hamburg, complete your residence in the beautiful city.</p>
+                </div>
+              </div>
+            
+              <div class="item">
+                <img src="img/slider/slide3.png" alt="Flower" class="img-responsive">
+                <div class="carousel-caption">
+                    <p>Our sincere staff create outstanding hospitality and deliver personal well-being.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="greenBtn"><a href="#news" data-transition="slide" class="ptb15">Continue</a></div>
     </section>
 
     <div data-role="page" id="news">
     	  <div data-role="panel" id="newsPanel" data-position="left">
-          	<div class="signIn"><img src="img/user.png" /><a href="#signIn" class="signInLink" data-transition="slide">Please Sign In</a></div>
+          	<div class="signIn"><a href="#profile" data-transition="slide"><img src="img/user.png" /></a><a href="#signIn" class="signInLink" data-transition="slide">Please Sign In</a></div>
           	<div class="gen">General</div>
     		<ul data-role="listview" id="list">
                 <li><a href="#booking" data-transition="slide" class="ui-btn"><img src="img/calendar-icon.png" />Book</a></li>
-                <li><a href="#" data-transition="slide" class="ui-btn"><img src="img/Bullet.png" class="mt5" />My Stays</a></li>
+                <li><a href="#myStays" data-transition="slide" class="ui-btn"><img src="img/Bullet.png" class="mt5" />My Stays</a></li>
                 <li><a href="#offers" data-transition="slide" class="ui-btn"><img src="img/offers.png" />Offers</a></li>
                 <li><a href="#news" data-transition="slide" class="ui-btn"><img src="img/news.png" />News</a></li>
                 <li><a href="#about" data-transition="slide" class="ui-btn"><img src="img/about.png" />About</a></li>
@@ -101,11 +132,11 @@
 
     <div data-role="page" id="offers">
     	  <div data-role="panel" id="offerPanel" data-position="left">
-          	<div class="signIn"><img src="img/user.png" /><a href="#signIn" class="signInLink" data-transition="slide">Please Sign In</a></div>
+          	<div class="signIn"><a href="#profile" data-transition="slide"><img src="img/user.png" /></a><a href="#signIn" class="signInLink" data-transition="slide">Please Sign In</a></div>
           	<div class="gen">General</div>
     		<ul data-role="listview" id="list">
                 <li><a href="#booking" data-transition="slide" class="ui-btn"><img src="img/calendar-icon.png" />Book</a></li>
-                <li><a href="#" data-transition="slide" class="ui-btn"><img src="img/Bullet.png" class="mt5" />My Stays</a></li>
+                <li><a href="#myStays" data-transition="slide" class="ui-btn"><img src="img/Bullet.png" class="mt5" />My Stays</a></li>
                 <li><a href="#offers" data-transition="slide" class="ui-btn"><img src="img/offers.png" />Offers</a></li>
                 <li><a href="#news" data-transition="slide" class="ui-btn"><img src="img/news.png" />News</a></li>
                 <li><a href="#about" data-transition="slide" class="ui-btn"><img src="img/about.png" />About</a></li>
@@ -140,11 +171,11 @@
     
     <div data-role="page" id="about">
     	  <div data-role="panel" id="aboutPanel" data-position="left">
-          	<div class="signIn"><img src="img/user.png" /><a href="#signIn" class="signInLink" data-transition="slide">Please Sign In</a></div>
+          	<div class="signIn"><a href="#profile" data-transition="slide"><img src="img/user.png" /></a><a href="#signIn" class="signInLink" data-transition="slide">Please Sign In</a></div>
           	<div class="gen">General</div>
     		<ul data-role="listview" id="list">
                 <li><a href="#booking" data-transition="slide" class="ui-btn"><img src="img/calendar-icon.png" />Book</a></li>
-                <li><a href="#" data-transition="slide" class="ui-btn"><img src="img/Bullet.png" class="mt5" />My Stays</a></li>
+                <li><a href="#myStays" data-transition="slide" class="ui-btn"><img src="img/Bullet.png" class="mt5" />My Stays</a></li>
                 <li><a href="#offers" data-transition="slide" class="ui-btn"><img src="img/offers.png" />Offers</a></li>
                 <li><a href="#news" data-transition="slide" class="ui-btn"><img src="img/news.png" />News</a></li>
                 <li><a href="#about" data-transition="slide" class="ui-btn"><img src="img/about.png" />About</a></li>
@@ -180,7 +211,7 @@
     <div data-role="page" id="roomList" class="pb47">
         <div data-role="header">
         	<div class="ui-grid-solo bgTheme">
-            	<div class="menu"><a href="#selectHotel" data-transition="slide"><img src="img/Arrow-Left-icon.png" alt="Left Arrow" /></a></div>
+            	<div class="menu"><a href="#selectHotel" data-transition="slide"><img src="img/ic_up.png" alt="Left Arrow" /></a></div>
                 <div class="ribbon"><img src="img/ribbon.png" /></div>
                 <div class="pageName">Room List</div>
                 <p class="clear"></p>
@@ -198,21 +229,22 @@
                 </div>
             </div>
         	<div class="ui-grid-solo contentBorder">
-            	<img src="img/lavalRoom.jpg" class="imgResponsive" />
+            	<a href="#roomInfo" data-transition="slide">
+            	<img src="img/antalya.jpg" class="imgResponsive" />
                 <div class="imgTextRoom">
                 	<div class="textRoomLeft">Suita Tumpiv<br /><span>from</span>459.00</div>
-                    <div class="textRoomRight"><a href="#roomInfo" data-transition="slide"><img src="img/info.png" /></a></div>
+                    <div class="textRoomRight"><img src="img/info.png" /></a></div>
                 </div>
             </div><!--/ ui-grid-solo -->
         	<div class="ui-grid-solo contentBorder">
-            	<img src="img/lavalRoom1.jpg" class="imgResponsive" />
+            	<img src="img/cappadocia.jpg" class="imgResponsive" />
                 <div class="imgTextRoom">
                 	<div class="textRoomLeft">Suita Tumpiv<br /><span>from</span>459.00</div>
                     <div class="textRoomRight"><img src="img/info.png" /></div>
                 </div>
             </div><!--/ ui-grid-solo -->
         	<div class="ui-grid-solo contentBorder">
-            	<img src="img/lavalRoom2.jpg" class="imgResponsive" />
+            	<img src="img/kusadasi.jpg" class="imgResponsive" />
                 <div class="imgTextRoom">
                 	<div class="textRoomLeft">Suita Tumpiv<br /><span>from</span>459.00</div>
                     <div class="textRoomRight"><img src="img/info.png" /></div>
@@ -234,6 +266,17 @@
         <div data-role="main" class="ui-content">
             <div class="ui-grid-solo">
             	<div class="hotelImageLarge"><img src="img/lavalRoom.jpg" /></div>
+            </div>
+            <div class="ui-grid-solo ratesInfo">
+            	<h3 class="ratesHeading">Rates</h3>
+                <div class="ui-grid-solo ratesDetail">
+                	<div class="ratesTop">
+                    	<div class="ratesPlus"><img src="img/aplus.png" /></div>
+                        <div class="ratesStandard">Standard</div>
+                        <div class="ratesValue"><span class="ratesPrice">150.00</span><span class="ratesCurrency">cad</span></div>
+                    </div>
+                    <div class="ratesBottom">standard</div>
+                </div>
             </div>
             <div class="ui-grid-solo bookingHeadBdr infoHname">
             	<h3>Room Description</h3>
@@ -263,11 +306,11 @@
 
     <div data-role="page" id="signUp">
     	  <div data-role="panel" id="signupPanel" data-position="left">
-          	<div class="signIn"><img src="img/user.png" /><a href="#signIn" class="signInLink" data-transition="slide">Please Sign In</a></div>
+          	<div class="signIn"><a href="#profile" data-transition="slide"><img src="img/user.png" /></a><a href="#signIn" class="signInLink" data-transition="slide">Please Sign In</a></div>
           	<div class="gen">General</div>
     		<ul data-role="listview" id="list">
                 <li><a href="#booking" data-transition="slide" class="ui-btn"><img src="img/calendar-icon.png" />Book</a></li>
-                <li><a href="#" data-transition="slide" class="ui-btn"><img src="img/Bullet.png" class="mt5" />My Stays</a></li>
+                <li><a href="#myStays" data-transition="slide" class="ui-btn"><img src="img/Bullet.png" class="mt5" />My Stays</a></li>
                 <li><a href="#offers" data-transition="slide" class="ui-btn"><img src="img/offers.png" />Offers</a></li>
                 <li><a href="#news" data-transition="slide" class="ui-btn"><img src="img/news.png" />News</a></li>
                 <li><a href="#about" data-transition="slide" class="ui-btn"><img src="img/about.png" />About</a></li>
@@ -329,7 +372,7 @@
     
     <div data-role="page" id="reset">
     	<div data-role="content" class="ui-content">
-        	<div class="ui-grid-solo bgImg" id="height1">
+        	<div class="ui-grid-solo bgImg">
             	<div class="inner">
                 	<div class="ui-grid-a">
                     	<div class="menu-white"><a href="#code" data-transition="slide"><img src="img/Arrow-Left-icon2.png" /></a></div>
@@ -353,11 +396,11 @@
     
     <div data-role="page" id="signIn">
     	  <div data-role="panel" id="signinPanel" data-position="left">
-          	<div class="signIn"><img src="img/user.png" /><a href="#signIn" class="signInLink" data-transition="slide">Please Sign In</a></div>
+          	<div class="signIn"><a href="#profile" data-transition="slide"><img src="img/user.png" /></a><a href="#signIn" class="signInLink" data-transition="slide">Please Sign In</a></div>
           	<div class="gen">General</div>
     		<ul data-role="listview" id="list">
                 <li><a href="#booking" data-transition="slide" class="ui-btn"><img src="img/calendar-icon.png" />Book</a></li>
-                <li><a href="#" data-transition="slide" class="ui-btn"><img src="img/Bullet.png" class="mt5" />My Stays</a></li>
+                <li><a href="#myStays" data-transition="slide" class="ui-btn"><img src="img/Bullet.png" class="mt5" />My Stays</a></li>
                 <li><a href="#offers" data-transition="slide" class="ui-btn"><img src="img/offers.png" />Offers</a></li>
                 <li><a href="#news" data-transition="slide" class="ui-btn"><img src="img/news.png" />News</a></li>
                 <li><a href="#about" data-transition="slide" class="ui-btn"><img src="img/about.png" />About</a></li>
@@ -394,11 +437,11 @@
 
     <div data-role="page" id="booking" class="pb60">
     	  <div data-role="panel" id="bookingPanel" data-position="left">
-          	<div class="signIn"><img src="img/user.png" /><a href="#signIn" class="signInLink" data-transition="slide">Please Sign In</a></div>
+          	<div class="signIn"><a href="#profile" data-transition="slide"><img src="img/user.png" /></a><a href="#signIn" class="signInLink" data-transition="slide">Please Sign In</a></div>
           	<div class="gen">General</div>
     		<ul data-role="listview" id="list">
                 <li><a href="#booking" data-transition="slide" class="ui-btn"><img src="img/calendar-icon.png" />Book</a></li>
-                <li><a href="#" data-transition="slide" class="ui-btn"><img src="img/Bullet.png" class="mt5" />My Stays</a></li>
+                <li><a href="#myStays" data-transition="slide" class="ui-btn"><img src="img/Bullet.png" class="mt5" />My Stays</a></li>
                 <li><a href="#offers" data-transition="slide" class="ui-btn"><img src="img/offers.png" />Offers</a></li>
                 <li><a href="#news" data-transition="slide" class="ui-btn"><img src="img/news.png" />News</a></li>
                 <li><a href="#about" data-transition="slide" class="ui-btn"><img src="img/about.png" />About</a></li>
@@ -449,13 +492,13 @@
             	<div class="roomOccopied">
                 	<div class="roomOccoTop">Room 1 Occopants</div>
                     <div class="ui-grid-a">
-                    	<div class="ui-block-a txtCenter p15" style="width:50%;">
+                    	<div class="ui-block-a txtCenter bookPad" style="width:50%;">
                         	<img src="img/icon_code_corporate.png" class="mr10">
                             <span class="numbe">2</span><span class="pers">Adults</span>
                         </div>
-                        <div class="ui-block-b txtCenter p15" style="width:50%">
+                        <div class="ui-block-b txtCenter bookPad" style="width:50%">
                         	<img src="img/icon_child.png" class="mr10">
-                            <span class="numbe">0</span><span class="pers">Children</span>
+                            <span class="numbe">0</span><span class="pers1">Children</span>
                         </div>
                     </div>
                 </div>
@@ -489,7 +532,7 @@
                 </div>
             </div><!--/ ui-grid-solo -->
         </div><!--/ content -->
-        <div class="bookBottom"><a href="#selectHotel" data-transition="slide">Please Choose your Hotel</a></div>                      
+        <div class="bookBottom"><a href="#selectHotel">Please Choose your Hotel</a></div>                      
     </div><!--/data-role=page-->
     
     <div data-role="page" id="selectHotel" class="pb60">
@@ -505,22 +548,23 @@
         </div><!--/ header -->
         <div data-role="main" class="ui-content">
             <div class="ui-grid-solo bbred">
+            	<a href="#hotelInfo" data-transition="slide">
             	<div class="hotelImage"><img src="img/hotelImage.png" /></div>
                 <div class="hotelDetail">
                 	<div class="hotelName"><h4>Hotel Laval</h4></div>
                     <div class="hotelPrice"><span class="from">from</span><span class="rate">200.00</span><span class="currency">CAD</span></div>
                 </div>
-                <div class="hotelInfo"><a href="#hotelInfo" data-transition="slide"><img src="img/info.png" /></a></div>
+                <div class="hotelInfo"><img src="img/info.png" /></a></div>
                 <p class="clear"></p>
             </div>
         </div><!--/ content -->
-        <div class="bookBottom"><a href="#hotelInfo" data-transition="slide">Please Choose your Hotel</a></div>                      
+        <div class="bookBottom">Please Choose your Hotel</a></div>                      
     </div><!--/data-role=page-->
     
     <div data-role="page" id="hotelInfo" class="pb60">
         <div data-role="header">
         	<div class="ui-grid-solo bgTheme">
-            	<div class="menu"><a href="#selectHotel" data-transition="slide"><img src="img/ic_up.png" alt="Back" /></a></div>
+            	<div class="menu"><a href="#selectHotel"><img src="img/ic_up.png" alt="Back" /></a></div>
                 <div class="ribbon ml0"><img src="img/ribbon.png" /></div>
                 <div class="pageName fz20">The Hotel</div>
                 <p class="clear"></p>
@@ -534,7 +578,13 @@
             	<h3>Hotel Laval</h3>
             </div>
             <div class="ui-grid-solo mlr15">
-            	<p class="infoHdetail">The La Val Hotel is lovated 1300 metres above sea level on the sunny plateau of Breil/Brigels. It offers spacious rooms with south-facing balconies, an award-winning 500 m<sup>2</sup> spa area, and free parking. The spa area offers a relaxation oasis, massages, kosmetics treatments, saunas, steam baths and a heated wellness pool. All rooms in the Hotel La Val Bergspa Brigels feature a bathroom, a flat-screen TV and a safe. Some a Nespresso coffee machine. Swiss, international and Mediterranean cuisine is served in the the Bistro and in the restaurent. There is also a separate Smokers Lounge and a walk-in wine closet. Old wooden ski and sleds add to the Alpine charm of the hotel. The La Val hotel is the ideal base for trips over the Lukmanierpass to Ticino or over the Oberalp pass to Central Switzerland. The Burleun ski lift is 1 km away. Hiking, Nordic walking, cycling, mini golf, tennis, climbing, golf and river rafting are popular activities in the region. Winter activities include skiing, snowboarding, sledding, ice skating and snow-shoeing. Guests receive a 20% discount on the local golf course's green fees.</p>
+            	<p class="infoHdetail">The La Val Hotel is lovated 1300 metres above sea level on the sunny plateau of Breil/Brigels. It offers spacious rooms with south-facing balconies, an award-winning 500 m<sup>2</sup> spa area, and free parking.</p>
+                <p class="infoHdetail">The spa area offers a relaxation oasis, massages, kosmetics treatments, saunas, steam baths and a heated wellness pool.</p>
+                <p class="infoHdetail">All rooms in the Hotel La Val Bergspa Brigels feature a bathroom, a flat-screen TV and a safe. Some a Nespresso coffee machine.</p>
+                <p class="infoHdetail">Swiss, international and Mediterranean cuisine is served in the the Bistro and in the restaurent. There is also a separate Smokers Lounge and a walk-in wine closet. Old wooden ski and sleds add to the Alpine charm of the hotel.</p>
+                <p class="infoHdetail">The La Val hotel is the ideal base for trips over the Lukmanierpass to Ticino or over the Oberalp pass to Central Switzerland. The Burleun ski lift is 1 km away.</p>
+                <p class="infoHdetail">Hiking, Nordic walking, cycling, mini golf, tennis, climbing, golf and river rafting are popular activities in the region. Winter activities include skiing, snowboarding, sledding, ice skating and snow-shoeing.</p>
+                <p class="infoHdetail">Guests receive a 20% discount on the local golf course's green fees.</p>
             </div>
             <div class="ui-grid-solo bookingHeadBdr infoHname">
             	<h3>Hotel Amenities</h3>
@@ -580,63 +630,366 @@
             </div><!--/ ui-grid-solo -->
         </div><!--/ content -->
     </div><!--/data-role=page-->
+     
+    <div data-role="page" id="profile" class="pb60">
+    	  <div data-role="panel" id="profilePanel" data-position="left">
+          	<div class="signIn"><a href="#profile"><img src="img/user.png" /></a><a href="#signIn" class="signInLink" data-transition="slide">Please Sign In</a></div>
+          	<div class="gen">General</div>
+    		<ul data-role="listview" id="list">
+                <li><a href="#booking" data-transition="slide" class="ui-btn"><img src="img/calendar-icon.png" />Book</a></li>
+                <li><a href="#myStays" data-transition="slide" class="ui-btn"><img src="img/Bullet.png" class="mt5" />My Stays</a></li>
+                <li><a href="#offers" data-transition="slide" class="ui-btn"><img src="img/offers.png" />Offers</a></li>
+                <li><a href="#news" data-transition="slide" class="ui-btn"><img src="img/news.png" />News</a></li>
+                <li><a href="#about" data-transition="slide" class="ui-btn"><img src="img/about.png" />About</a></li>
+                <li><a href="#" data-transition="slide" class="ui-btn"><img src="img/share.png" />Share</a></li>
+    		</ul>
+    		<div class="signIn"><p>4.0.34 - Test Build</p></div>
+		  </div><!--/ panel -->    
+        <div data-role="header">
+        	<div class="ui-grid-solo bgTheme">
+            	<div class="menu"><a href="#profilePanel"><img src="img/ic_drawer.png" alt="Menu" /></a></div>
+                <div class="ribbon"><img src="img/ribbon.png" /></div>
+                <div class="pageName">Profile</div>
+                <div class="overflow"><img src="img/ic_overflow.png" /></div>
+                <p class="clear"></p>
+            </div>
+        </div><!--/ header -->
+        <div data-role="main" class="ui-content bgImg height pb60">
+            <div class="ui-grid-solo bgblack">
+            	<div class="ProfileImage"><img src="img/profileImg.jpg" /></div>
+                <h4 class="personName">Noaman Saeed</h4>
+            </div>
+            <div class="ui-grid-solo bgWhite">
+            	<h3 class="pDetails">Personal Details</h3>
+            </div>
+            <div class="ui-grid-solo bgWhite">
+            	<h4 class="proDetHeading pt8">Email</h3>
+                <p class="proDetInfo">noman@nowasys.com</p>
+            </div>
+            <div class="ui-grid-solo bgWhite">
+            	<h4 class="proDetHeading">Phone</h3>
+                <p class="proDetInfo">202 03 27</p>
+            </div>
+            <div class="ui-grid-solo bgWhite">
+            	<h4 class="proDetHeading">Address</h3>
+                <p class="proDetInfo">396 Green Lane</p>
+                <p class="proDetInfo">Birmingham</p>
+                <p class="proDetInfo txtUpper">b9 5qj</p>
+                <p class="proDetInfo">England - United Kingdom</p>
+            </div>
+            <div class="ui-grid-solo bgWhite">
+            	<h3 class="pDetails bdrTB pt8">My Stays</h3>
+            </div>
+            <div class="ui-grid-solo bgWhite">
+            	<div class="myStays">
+                    <div class="stayDate"><p>20 nov</p></div>
+                    <div class="stayDetail">
+                        <div class="sdTop">suita tumpiv</div>
+                        <div class="sdBottom">Bed and Breakfast (SFr459.00)</div>
+                    </div>
+                    <div class="stayInfo"><a><img src="img/arrow_profile.png" /></a></div>
+                </div>
+            </div>            
+            <div class="ui-grid-solo bgWhite">
+            	<div class="myStays">
+                    <div class="stayDate"><p>20 nov</p></div>
+                    <div class="stayDetail">
+                        <div class="sdTop">suita tumpiv</div>
+                        <div class="sdBottom">Bed and Breakfast (SFr459.00)</div>
+                    </div>
+                    <div class="stayInfo"><a><img src="img/arrow_profile.png" /></a></div>
+                </div>
+            </div>            
+            <div class="ui-grid-solo bgWhite">
+            	<div class="myStays">
+                    <div class="stayDate"><p>20 nov</p></div>
+                    <div class="stayDetail">
+                        <div class="sdTop">suita tumpiv</div>
+                        <div class="sdBottom">Bed and Breakfast (SFr459.00)</div>
+                    </div>
+                    <div class="stayInfo"><a><img src="img/arrow_profile.png" /></a></div>
+                </div>
+            </div>            
+            <div class="ui-grid-solo bgWhite txtCenter">
+            	<a class="allReserve" href="#myStays" data-transition="slide">See All Reservations</a>
+            </div>
+        </div><!--/ content -->
+        <div class="greenBtn"><a href="#editProfile" data-transition="slide">Edit</a></div>                      
+    </div><!--/data-role=page-->
     
-    <script>
-            jQuery(document).ready(function ($) {
-            
-            var jssor_1_options = {
-              $AutoPlay: true,
-              $SlideDuration: 1000,
-              $SlideEasing: $Jease$.$OutQuint,
-              $ArrowNavigatorOptions: {
-                $Class: $JssorArrowNavigator$
-              },
-              $BulletNavigatorOptions: {
-                $Class: $JssorBulletNavigator$
-              }
-            };
-            
-            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
-            
-            //responsive code begin
-            //you can remove responsive code if you don't want the slider scales while window resizes
-            function ScaleSlider() {
-                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
-                if (refSize) {
-                    refSize = Math.min(refSize, 1920);
-                    jssor_1_slider.$ScaleWidth(refSize);
-                }
-                else {
-                    window.setTimeout(ScaleSlider, 30);
-                }
-            }
-            ScaleSlider();
-            $(window).bind("load", ScaleSlider);
-            $(window).bind("resize", ScaleSlider);
-            $(window).bind("orientationchange", ScaleSlider);
-            //responsive code end
-        });
-    
-    </script>
+    <div data-role="page" id="editProfile" class="pb60">
+        <div data-role="header">
+        	<div class="ui-grid-solo bgTheme">
+            	<div class="menu"><a href="#profile"><img src="img/ic_up.png" alt="Back" /></a></div>
+                <div class="ribbon"><img src="img/ribbon.png" /></div>
+                <div class="pageName">Edit Your Information</div>
+                <p class="clear"></p>
+            </div>
+        </div><!--/ header -->
+        <div data-role="main" class="ui-content pb60">
+<!--            <div class="ui-grid-solo bgblack">
+            	<div class="ProfileImage"><img src="img/profileImg.jpg" /></div>
+            </div>-->
+            <div class="ui-grid-solo pRel bgblack">
+            	<div class="bgImg1"></div>
+                <div class="editProImg"><img src="img/profileImg.jpg" /></div>
+            </div>
+            <div class="ui-grid-solo bgWhite">
+            	<div class="editProHeading">
+	                <h3>Contact Details</h3>
+                </div>            	
+                <hr class="editProRow" />
+            </div>
+            <div class="ui-grid-solo bgWhite">
+            	<form id="editForm" class="mlr15">
+                	<input type="text" name="fullName" id="editName" class="editName" value="Noaman Saeed" />
+                	<input type="text" name="email" id="editEmail" class="editEmail" value="noman@nowasys.com" />
+                	<input type="text" name="number" id="editNumber" class="editNumber" value="202 03 27" />
+            </div>
+            <div class="ui-grid-solo bgWhite">
+            	<div class="editProHeading">
+	                <h3>Address Details</h3>
+                </div>            	
+                <hr class="editProRow" />
+            </div>
+            <div class="ui-grid-solo bgWhite">
+            	<div class="mlr15">
+                	<input type="text" name="editAddress1" id="editAddress1" class="editAddress" value="10251 ST.Edwards Drive" />
+                	<input type="text" name="editAddress2" id="editAddress2" class="editAddress" value="noman@nowasys.com" />
+                	<input type="text" name="editCity" id="editCity" class="editCity" value="Richmond" />
+                	<input type="text" name="editPostcode" id="editPostcode" class="editCity" value="b9 5qj" />
+                	<input type="text" name="editCountry" id="editCountry" class="editCity" value="England" />
+                </form>
+                </div>
+            </div>
+        </div><!--/ content -->
+        <div class="greenBtn"><a><span class="mr5"><img src="img/icon_affirmative_action.png" /></span>Save</a></div>               
+    </div><!--/data-role=page-->
+     
+    <div data-role="page" id="myStays" class="ui-page-theme-b">
+    	  <div data-role="panel" id="myStaysPanel" data-position="left">
+          	<div class="signIn"><a href="#profile"><img src="img/user.png" /></a><a href="#signIn" class="signInLink" data-transition="slide">Please Sign In</a></div>
+          	<div class="gen">General</div>
+    		<ul data-role="listview" id="list">
+                <li><a href="#booking" data-transition="slide" class="ui-btn"><img src="img/calendar-icon.png" />Book</a></li>
+                <li><a href="#myStays" data-transition="slide" class="ui-btn"><img src="img/Bullet.png" class="mt5" />My Stays</a></li>
+                <li><a href="#offers" data-transition="slide" class="ui-btn"><img src="img/offers.png" />Offers</a></li>
+                <li><a href="#news" data-transition="slide" class="ui-btn"><img src="img/news.png" />News</a></li>
+                <li><a href="#about" data-transition="slide" class="ui-btn"><img src="img/about.png" />About</a></li>
+                <li><a href="#" data-transition="slide" class="ui-btn"><img src="img/share.png" />Share</a></li>
+    		</ul>
+    		<div class="signIn"><p>4.0.34 - Test Build</p></div>
+		  </div><!--/ panel -->    
+        <div data-role="header">
+        	<div class="ui-grid-solo bgTheme">
+            	<div class="menu"><a href="#myStaysPanel"><img src="img/ic_drawer.png" alt="Menu" /></a></div>
+                <div class="ribbon"><img src="img/ribbon.png" /></div>
+                <div class="pageName">My Stays</div>
+                <p class="clear"></p>
+            </div>
+        </div><!--/ header -->
+        <div data-role="main" class="ui-content">
+            <div class="ui-grid-solo">
+                <div data-role="tabs" id="tabs">
+                  <div data-role="navbar" class="ptb12 mlr15">
+                    <ul>
+                      <li><a href="#past" data-ajax="false" class="ui-btn-active">Past</a></li>
+                      <li><a href="#nextStay" data-ajax="false">Next Stay</a></li>
+                      <li><a href="#future" data-ajax="false">Future</a></li>
+                    </ul>
+                  </div>
+                  <div id="past" class="ui-body-d ui-content">
+                     <div class="ui-grid-solo bgWhite mlr15">
+                        <div class="myStaysDetail">
+                            <div class="myStayDate"><p class="sdmargin">oct 2015</p></div>
+                            <div class="myStayDetail">
+                            	<div class="mysdt">Hotel Laval</div>
+                                <div class="mysdm">suita tumpiv</div>
+                                <div class="mysdb">Bed and Breakfast (SFr459.00)</div>
+                            </div>
+                            <div class="stayInfo"><a><img src="img/arrow_right1.png" /></a></div>
+                        </div>
+                    </div>            
+                     <div class="ui-grid-solo bgWhite mlr15">
+                        <div class="myStaysDetail">
+                            <div class="myStayDate"><p class="sdmargin">oct 2015</p></div>
+                            <div class="myStayDetail">
+                            	<div class="mysdt">Hotel Laval</div>
+                                <div class="mysdm">suita tumpiv</div>
+                                <div class="mysdb">Bed and Breakfast (SFr459.00)</div>
+                            </div>
+                            <div class="stayInfo"><a><img src="img/arrow_right1.png" /></a></div>
+                        </div>
+                    </div>            
+                     <div class="ui-grid-solo bgWhite mlr15">
+                        <div class="myStaysDetail">
+                            <div class="myStayDate"><p class="sdmargin">oct 2015</p></div>
+                            <div class="myStayDetail">
+                            	<div class="mysdt">Hotel Laval</div>
+                                <div class="mysdm">suita tumpiv</div>
+                                <div class="mysdb">Bed and Breakfast (SFr459.00)</div>
+                            </div>
+                            <div class="stayInfo"><a><img src="img/arrow_right1.png" /></a></div>
+                        </div>
+                    </div>            
+                     <div class="ui-grid-solo bgWhite mlr15">
+                        <div class="myStaysDetail">
+                            <div class="myStayDate"><p class="sdmargin">oct 2015</p></div>
+                            <div class="myStayDetail">
+                            	<div class="mysdt">Hotel Laval</div>
+                                <div class="mysdm">suita tumpiv</div>
+                                <div class="mysdb">Bed and Breakfast (SFr459.00)</div>
+                            </div>
+                            <div class="stayInfo"><a><img src="img/arrow_right1.png" /></a></div>
+                        </div>
+                    </div>            
+                     <div class="ui-grid-solo bgWhite mlr15">
+                        <div class="myStaysDetail">
+                            <div class="myStayDate"><p class="sdmargin">oct 2015</p></div>
+                            <div class="myStayDetail">
+                            	<div class="mysdt">Hotel Laval</div>
+                                <div class="mysdm">suita tumpiv</div>
+                                <div class="mysdb">Bed and Breakfast (SFr459.00)</div>
+                            </div>
+                            <div class="stayInfo"><a><img src="img/arrow_right1.png" /></a></div>
+                        </div>
+                    </div>            
+                     <div class="ui-grid-solo bgWhite mlr15">
+                        <div class="myStaysDetail">
+                            <div class="myStayDate"><p class="sdmargin">oct 2015</p></div>
+                            <div class="myStayDetail">
+                            	<div class="mysdt">Hotel Laval</div>
+                                <div class="mysdm">suita tumpiv</div>
+                                <div class="mysdb">Bed and Breakfast (SFr459.00)</div>
+                            </div>
+                            <div class="stayInfo"><a><img src="img/arrow_right1.png" /></a></div>
+                        </div>
+                    </div>            
+                  </div><!-- /past stays -->
+                  <div id="nextStay">
+					<div class="ui-grid-solo confirmReserve">
+                    	<p class="m0">This reservation is <strong>confirmed</strong></p>
+                    </div>
+                    <div class="ui-grid-solo nsHotelInfo">
+                    	<h3 class="nsHotelName m0">Hotel Laval</h3>
+                        <p class="nsResNumb">lbh-vm-000169</p>
+                    </div>
+                    <div class="ui-grid-solo nsResInfo">
+                    	<p>20 Nov 2015 - 21 Nov 2015</p>
+                        <p>2 Adults</p>
+                        <p>SUITA TUMPIV, Bed and Breakfast</p>
+                        <h3 class="nsRoomPrice">SFr471.00</h3>
+                    </div>
+                    <div class="ui-grid-solo nsMap">
+                    	<div id="googleMap" style="width:100%;height:265px;"></div>
+                    </div>
+                    <div class="ui-grid-solo nsOpt">
+                    	<h3>Options</h3>
+                    </div>
+                    <div class="ui-grid-solo nsOptions">
+                        <div class="nsAddRes"><p>Add this reservation to your calender</p></div>
+                        <div class="nsAddBtn"><a href="" class="addBtn">Add</a></div>
+                    </div>
+                  </div><!-- /next reservations -->
+                  <div id="future">
+                     <div class="ui-grid-solo bgWhite mlr15">
+                        <div class="myStaysDetail">
+                            <div class="myStayDate"><p class="sdmargin">oct 2015</p></div>
+                            <div class="myStayDetail">
+                            	<div class="mysdt">Hotel Laval</div>
+                                <div class="mysdm">suita tumpiv</div>
+                                <div class="mysdb">Bed and Breakfast (SFr459.00)</div>
+                            </div>
+                            <div class="stayInfo"><a><img src="img/arrow_right1.png" /></a></div>
+                        </div>
+                    </div>            
+                     <div class="ui-grid-solo bgWhite mlr15">
+                        <div class="myStaysDetail">
+                            <div class="myStayDate"><p class="sdmargin">oct 2015</p></div>
+                            <div class="myStayDetail">
+                            	<div class="mysdt">Hotel Laval</div>
+                                <div class="mysdm">suita tumpiv</div>
+                                <div class="mysdb">Bed and Breakfast (SFr459.00)</div>
+                            </div>
+                            <div class="stayInfo"><a><img src="img/arrow_right1.png" /></a></div>
+                        </div>
+                    </div>            
+                     <div class="ui-grid-solo bgWhite mlr15">
+                        <div class="myStaysDetail">
+                            <div class="myStayDate"><p class="sdmargin">oct 2015</p></div>
+                            <div class="myStayDetail">
+                            	<div class="mysdt">Hotel Laval</div>
+                                <div class="mysdm">suita tumpiv</div>
+                                <div class="mysdb">Bed and Breakfast (SFr459.00)</div>
+                            </div>
+                            <div class="stayInfo"><a><img src="img/arrow_right1.png" /></a></div>
+                        </div>
+                    </div>            
+                     <div class="ui-grid-solo bgWhite mlr15">
+                        <div class="myStaysDetail">
+                            <div class="myStayDate"><p class="sdmargin">oct 2015</p></div>
+                            <div class="myStayDetail">
+                            	<div class="mysdt">Hotel Laval</div>
+                                <div class="mysdm">suita tumpiv</div>
+                                <div class="mysdb">Bed and Breakfast (SFr459.00)</div>
+                            </div>
+                            <div class="stayInfo"><a><img src="img/arrow_right1.png" /></a></div>
+                        </div>
+                    </div>            
+                     <div class="ui-grid-solo bgWhite mlr15">
+                        <div class="myStaysDetail">
+                            <div class="myStayDate"><p class="sdmargin">oct 2015</p></div>
+                            <div class="myStayDetail">
+                            	<div class="mysdt">Hotel Laval</div>
+                                <div class="mysdm">suita tumpiv</div>
+                                <div class="mysdb">Bed and Breakfast (SFr459.00)</div>
+                            </div>
+                            <div class="stayInfo"><a><img src="img/arrow_right1.png" /></a></div>
+                        </div>
+                    </div>            
+                     <div class="ui-grid-solo bgWhite mlr15">
+                        <div class="myStaysDetail">
+                            <div class="myStayDate"><p class="sdmargin">oct 2015</p></div>
+                            <div class="myStayDetail">
+                            	<div class="mysdt">Hotel Laval</div>
+                                <div class="mysdm">suita tumpiv</div>
+                                <div class="mysdb">Bed and Breakfast (SFr459.00)</div>
+                            </div>
+                            <div class="stayInfo"><a><img src="img/arrow_right1.png" /></a></div>
+                        </div>
+                    </div>            
+                  </div><!-- /future reservations -->
+                </div>
+            </div>
+        </div><!--/ content -->
+    </div><!--/data-role=page-->
     <script>
 	$(document).ready(function(){
 		resizeDiv();
-
+		sliderHeight();
 	});
     window.onresize = function(event) {
 		resizeDiv();
+		sliderHeight();
 	}
 
 	function resizeDiv() {
 	vph = $(window).height();
 	$("#height").css({'height': vph + 'px'});
 	$("#height1").css({'height': vph + 'px'});
-	$(".height").css({'height': vph + 'px'});	
+	$(".height").css({'height': vph + 'px'});
+	//alert("height = " + vph);	
+	}
+	function sliderHeight(){
+		var itemDiv = $(window).height();
+		var itemWidth = $(window).width();
+		var sliderResize = itemDiv - 50;
+		$('.item').css({'height': sliderResize + 'px'});
+		alert("width = " + itemWidth + ", height = " + itemDiv);	
 	}
 
-
     </script>
-          	<script>
+   	<script>
 
         // disabling dates
         var nowTemp = new Date();
@@ -671,8 +1024,16 @@
 	//convert month to 2 digits
 	var twoDigitMonth = ((fullDate.getMonth().length+1) === 1)? (fullDate.getMonth()+1) : (fullDate.getMonth()+1);
 	var mnth = fullDate.getDate();
-	var currentDate = mnth + "/" + twoDigitMonth + "/" + fullDate.getFullYear();
-	var nextDate = ++mnth + "/" + twoDigitMonth + "/" + fullDate.getFullYear();
+	var nextMnth = fullDate.getDate();	
+	if(mnth < 10 || nextMnth < 10){
+		mnth = "0"+mnth;
+		nextMnth = "0"+ ++nextMnth;
+		}
+	if(twoDigitMonth == 1){
+		twoDigitMonth = "Jan";
+		}
+	var currentDate = twoDigitMonth +" "+ mnth +" "+ fullDate.getFullYear();
+	var nextDate = twoDigitMonth +" "+ nextMnth + " " + fullDate.getFullYear();
 	$('#dpd1').val(currentDate);
 	$('#dpd2').val(nextDate);
 	
@@ -682,7 +1043,7 @@
 		bed++;
 		//alert(bed);
 		$('.bedNumber').text(bed);
-		$('#appendDiv').append('<div class="roomOccopied mt15"><div class="roomOccoTop">Room <span class="bedNumb">'+bed+'</span> Occopants</div><div class="minus1"><img src="img/minus.png" /></div><div class="ui-grid-a"><div class="ui-block-a txtCenter p15" style="width:50%;"><img src="img/icon_code_corporate.png" class="mr10"><span class="numbe">2</span><span class="pers">Adults</span></div><div class="ui-block-b txtCenter p15" style="width:50%"><img src="img/icon_child.png" class="mr10"><span class="numbe">0</span><span class="pers">Children</span></div></div></div>');
+		$('#appendDiv').append('<div class="roomOccopied mt15"><div class="roomOccoTop">Room <span class="bedNumb">'+bed+'</span> Occopants</div><div class="minus1"><img src="img/minus.png" /></div><div class="ui-grid-a"><div class="ui-block-a txtCenter bookPad" style="width:50%;"><img src="img/icon_code_corporate.png" class="mr10"><span class="numbe">2</span><span class="pers">Adults</span></div><div class="ui-block-b txtCenter bookPad" style="width:50%"><img src="img/icon_child.png" class="mr10"><span class="numbe">0</span><span class="pers1">Children</span></div></div></div>');
 	});
 	// remove div one by one
 		$('#appendDiv').on('click','.minus1',function() {
@@ -702,9 +1063,24 @@
 
 			// Move to a new location or you can do something else
 			window.location.href = "#news";
-			}, 9000);
+			}, 12000);
 		});
-    
+//		$("#dpd1").click(function(){
+//				//$(".cal-lr").css({'right': '16px'});
+//				var left2 = $('.cal-lr').css('left');
+//				if(left2 == '17px'){
+//				alert(left2);
+//				}
+//			});
+//		$("#dpd2").click(function(){
+//				//$(".cal-lr").css({'right': '16px'});
+//				var left3 = $('#dpd21').css('left');
+//				if(left3 == "177px"){
+//					alert(left3);
+//				}
+//				
+//			});
+
     </script>
     
 </body>

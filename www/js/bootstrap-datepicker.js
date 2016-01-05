@@ -16,15 +16,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * ========================================================= */
- 
+
 !function( $ ) {
 	
 	// Picker object
 	
 	var Datepicker = function(element, options){
 		this.element = $(element);
-		this.format = DPGlobal.parseFormat(options.format||this.element.data('date-format')||'dd/mm/yy');
-		this.picker = $(DPGlobal.template)
+		this.format = DPGlobal.parseFormat(options.format||this.element.data('date-format')||'mm dd yyyy');
+		// This method gets datepicker html template value and pass var to assign id for that div
+		this.picker = $(getDatePickerHTML(element.id+1))
 							.appendTo('body')
 							.on({
 								click: $.proxy(this.click, this)//,
@@ -350,7 +351,6 @@
 		}
 	};
 	$.fn.datepicker.Constructor = Datepicker;
-	
 	var DPGlobal = {
 		modes: [
 			{
@@ -435,11 +435,37 @@
 			};
 			val.dd = (val.d < 10 ? '0' : '') + val.d;
 			val.mm = (val.m < 10 ? '0' : '') + val.m;
+			if(val.mm == 1){
+				val.mm = "Jan";
+				}else if(val.mm == 2){
+					val.mm = "Feb";	
+				}else if(val.mm == 3){
+					val.mm = "Mar";	
+				}else if(val.mm == 4){
+					val.mm = "Apr";	
+				}else if(val.mm == 5){
+					val.mm = "May";	
+				}else if(val.mm == 6){
+					val.mm = "Jun";	
+				}else if(val.mm == 7){
+					val.mm = "Jul";	
+				}else if(val.mm == 8){
+					val.mm = "Aug";	
+				}else if(val.mm == 9){
+					val.mm = "Sep";	
+				}else if(val.mm == 10){
+					val.mm = "Oct";	
+				}else if(val.mm == 11){
+					val.mm = "Nov";	
+				}else if(val.mm == 12){
+					val.mm = "Dec";	
+				}
 			var date = [];
 			for (var i=0, cnt = format.parts.length; i < cnt; i++) {
 				date.push(val[format.parts[i]]);
 			}
-			return date.join(format.separator);
+			//return date.join(format.separator);
+			return date;
 		},
 		headTemplate: '<thead>'+
 							'<tr>'+
@@ -450,7 +476,7 @@
 						'</thead>',
 		contTemplate: '<tbody><tr><td colspan="7"></td></tr></tbody>'
 	};
-	DPGlobal.template = '<div class="datepicker dropdown-menu">'+
+	DPGlobal.template = '<div class="datepicker dropdown-menu cal-lr">'+
 							'<div class="datepicker-days">'+
 								'<table class=" table-condensed">'+
 									DPGlobal.headTemplate+
@@ -470,5 +496,29 @@
 								'</table>'+
 							'</div>'+
 						'</div>';
-
+						
+	function getDatePickerHTML(id){
+			var datePickerHtmlValue = '<div class="datepicker dropdown-menu cal-lr" id="'+ id +'">'+
+							'<div class="datepicker-days">'+
+								'<table class=" table-condensed">'+
+									DPGlobal.headTemplate+
+									'<tbody></tbody>'+
+								'</table>'+
+							'</div>'+
+							'<div class="datepicker-months">'+
+								'<table class="table-condensed">'+
+									DPGlobal.headTemplate+
+									DPGlobal.contTemplate+
+								'</table>'+
+							'</div>'+
+							'<div class="datepicker-years">'+
+								'<table class="table-condensed">'+
+									DPGlobal.headTemplate+
+									DPGlobal.contTemplate+
+								'</table>'+
+							'</div>'+
+						'</div>';
+				return datePickerHtmlValue;					
+	}
+	
 }( window.jQuery );
