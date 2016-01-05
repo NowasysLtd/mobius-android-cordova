@@ -81,7 +81,7 @@ p.clear{ clear:both; margin-top:0px !important; margin-bottom:0px !important;}
 .ui-grid-a > .ui-block-a { width: 45%;}
 .ui-grid-a > .ui-block-b { width:55%;}
 .alignCenter{ text-align:center;}
-.welcome{ color: #fff; font-size: 54px; font-weight: 100; margin-top: 0px; margin-bottom: 0px;}
+.welcome{ color: #fff; font-size: 54px; font-weight: 100; margin-top: 0px; margin-bottom: 0px; padding-top:10px;}
 .welText{ color: #fff; font-family: gothic; font-size: 16px; margin-top: 15px; padding-left:10px; padding-right:10px;}
 .input{ background: url(../img/mailIcon.jpg) no-repeat 5px !important; padding-left: 46px !important; padding-top: 12px !important; padding-bottom: 12px !important;}
 .email{ background: url(../img/email.png) no-repeat 5px !important; padding-left: 46px !important; padding-top: 12px !important; padding-bottom: 12px !important;}
